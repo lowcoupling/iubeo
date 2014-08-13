@@ -14,11 +14,12 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css"  href="http://bootswatch.com/darkly/bootstrap.css" media ="screen">
     <link rel="stylesheet" type="text/css"  href="http://bootswatch.com/assets/css/bootswatch.min.css">
-
+	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="./index_files/ie-emulation-modes-warning.js"></script>
-
+	
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="./index_files/ie10-viewport-bug-workaround.js"></script>
 
@@ -86,10 +87,10 @@ p {
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="http://getbootstrap.com/examples/carousel/#">Home</a></li>
+                <li class="active"><a href="/iubeo/">Home</a></li>
                 <li><a href="http://getbootstrap.com/examples/carousel/#about">About</a></li>
                 <li><a href="http://getbootstrap.com/examples/carousel/#download">Download</a></li>
-                <li><a href="http://getbootstrap.com/examples/carousel/#docs">Documentation</a></li>
+                <li><a href="/iubeo/documentation.html">Documentation</a></li>
               </ul>
             </div>
           </div>
@@ -231,7 +232,12 @@ The integration with <a href="http://www.eclipse.org/birt/"> BIRT</a> enabls a q
 
     </div><!-- /.container -->
 
-
+<script>
+console.log(location.pathname);
+$(document).ready(function() {
+	$('.your-nav-container').find('a[href="' + location.pathname + '"]').parents('li');
+});
+</script>
     
 
-<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" title="" style="position: absolute; left: 0px; top: -9999px; width: 15px; height: 15px; z-index: 999999999;" data-original-title="Copy to clipboard">      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" id="global-zeroclipboard-flash-bridge" width="100%" height="100%">         <param name="movie" value="/assets/flash/ZeroClipboard.swf?noCache=1404286210722">         <param name="allowScriptAccess" value="sameDomain">         <param name="scale" value="exactfit">         <param name="loop" value="false">         <param name="menu" value="false">         <param name="quality" value="best">         <param name="bgcolor" value="#ffffff">         <param name="wmode" value="transparent">         <param name="flashvars" value="trustedOrigins=getbootstrap.com%2C%2F%2Fgetbootstrap.com%2Chttp%3A%2F%2Fgetbootstrap.com">         <embed src="/assets/flash/ZeroClipboard.swf?noCache=1404286210722" loop="false" menu="false" quality="best" bgcolor="#ffffff" width="100%" height="100%" name="global-zeroclipboard-flash-bridge" allowscriptaccess="sameDomain" allowfullscreen="false" type="application/x-shockwave-flash" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" flashvars="trustedOrigins=getbootstrap.com%2C%2F%2Fgetbootstrap.com%2Chttp%3A%2F%2Fgetbootstrap.com" scale="exactfit">                </object></div></body></html>
+</body></html>
