@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/com.lowcoupling.iubeo.defaultFeatures_0.0.1.qualifier.jar" id="com.lowcoupling.iubeo.defaultFeatures" version="0.0.1.qualifier">
+      <category name="iubeo"/>
+   </feature>
+   <category-def name="iubeo" label="Iubeo Default Configuration"/>
+</site>
