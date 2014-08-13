@@ -87,7 +87,7 @@ p {
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="/iubeo/">Home</a></li>
+                <li><a href="/iubeo/">Home</a></li>
                 <li><a href="http://getbootstrap.com/examples/carousel/#about">About</a></li>
                 <li><a href="http://getbootstrap.com/examples/carousel/#download">Download</a></li>
                 <li><a href="/iubeo/documentation.html">Documentation</a></li>
@@ -235,7 +235,6 @@ The integration with <a href="http://www.eclipse.org/birt/"> BIRT</a> enabls a q
 <script>
 console.log(location.pathname);
 $(document).ready(function() {
-	 alert(this.location.pathname);
 	 $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
 });
 </script>
