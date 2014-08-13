@@ -235,7 +235,7 @@ The integration with <a href="http://www.eclipse.org/birt/"> BIRT</a> enabls a q
 <script>
 console.log(location.pathname);
 $(document).ready(function() {
-	$('.your-nav-container').find('a[href="' + location.pathname + '"]').parents('li');
+	 $('a[href="' + this.location.pathname + '"]').parent().addClass('active');
 });
 </script>
     
