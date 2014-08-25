@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.lowcoupling.mdpm.lng.wbs.sdk"
+      label="WBS"
+      version="0.0.1.qualifier"
+      provider-name="LowCoupling">
+
+   <plugin
+         id="com.lowcoupling.mdpm.lng.wbs"
+         download-size="0"
+         install-size="0"
+         version="0.0.1.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="com.lowcoupling.mdpm.lng.wbs.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.1.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="com.lowcoupling.mdpm.ui.wbstreeview"
+         download-size="0"
+         install-size="0"
+         version="0.0.1.qualifier"
+         unpack="false"/>
+
+</feature>

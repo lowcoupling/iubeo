@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="Model Driven Project Management Wizards"
+            id="org.eclipse.mdpm.project.wizard">
+      </category>
+      <wizard
+            category="org.eclipse.mdpm.project.wizard"
+            class="com.lowcoupling.mdpm.project.wizard.wizards.MDPMNewWizard"
+            icon="icons/sample.gif"
+            id="org.eclipse.mdpm.project.wizard.wizards.MDPMNewWizard"
+            name="New MDPM Project"
+            project="true">
+      </wizard>
+   </extension>
+
+</plugin>

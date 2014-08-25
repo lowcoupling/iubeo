@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            name="New WBS Model"
+            icon="icons/bsnodeIcon.png"
+            category="org.eclipse.mdpm.project.wizard"
+            class="com.lowcoupling.mdpm.files.wbs.wizards.WBSFileNewWizard"
+            id="org.eclipse.mdpm.files.wbs.wizards.WBSFileNewWizard">
+      </wizard>
+   </extension>
+
+</plugin>

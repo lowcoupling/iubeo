@@ -1,0 +1,29 @@
+Project projectName{
+	//import resourcesFile
+   /*Activity description*/
+	Activity activityName1 {
+		//involves {
+		//	 Resource1 at 100%;
+		//	 Resource2 at 50%;
+		//}
+		starts '1/1/2013';
+		duration 20;
+		//ends '15/01/2013';
+		completeness 20%;
+	}
+	
+	Activity activityName2 {
+		//involves {Resource;}
+		starts '10/2/2013';
+		duration 5;
+		//ends '15/01/2013';
+		completeness 0%;
+		dependsOn projectName.activityName1;
+	}
+	
+	CheckPoint checkPointName {
+		date '21/2/2013';
+		completeness 0%;
+		dependsOn projectName.activityName2;
+	}
+}

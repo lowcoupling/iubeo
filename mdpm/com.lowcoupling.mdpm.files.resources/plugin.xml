@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            name="New Resources Model"
+            icon="icons/Group_Icon.png"
+            category="org.eclipse.mdpm.project.wizard"
+            class="com.lowcoupling.mdpm.files.resources.wizards.ResourcesNewWizard"
+            id="org.eclipse.mdpm.files.resources.wizards.ResourcesNewWizard">
+      </wizard>
+   </extension>
+
+</plugin>

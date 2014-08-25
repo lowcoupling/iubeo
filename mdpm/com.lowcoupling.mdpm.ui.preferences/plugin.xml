@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            name="Model Driven Project Management"
+            class="com.lowcoupling.mdpm.ui.preferences.preferences.MDPMPreferencePage"
+            id="com.lowcoupling.ui.mdpmPreferences">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.lowcoupling.mdpm.ui.preferences.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

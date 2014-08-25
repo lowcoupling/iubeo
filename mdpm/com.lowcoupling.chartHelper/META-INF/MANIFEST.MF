@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ChartHelper
+Bundle-SymbolicName: com.lowcoupling.chartHelper
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: com.lowcoupling.charthelper.Activator
+Bundle-Vendor: LowCoupling
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.birt.chart.engine;bundle-version="4.3.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Export-Package: com.lowcoupling.charthelper

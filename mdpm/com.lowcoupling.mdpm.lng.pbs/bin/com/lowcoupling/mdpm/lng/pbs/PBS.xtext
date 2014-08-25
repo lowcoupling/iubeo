@@ -1,0 +1,32 @@
+grammar com.lowcoupling.mdpm.lng.pbs.PBS with org.eclipse.xtext.common.Terminals hidden(WS, SL_COMMENT)
+
+generate pBS "http://www.lowcoupling.com/mdpm/lng/pbs/PBS"
+
+PBS:
+	Product
+;
+
+Product:
+	description=ML_COMMENT?
+	'Product ' name= ID 
+	 OPENCURLY
+	 (parts+=Part)*
+	 CLOSEDCURLY
+;
+	
+ Part:
+ 	description=ML_COMMENT?
+	'Part ' name= ID ((OPENCURLY
+	 (parts+=Part)*
+	 CLOSEDCURLY
+	 )|ENDLINE)
+;
+
+
+terminal ENDLINE :';'; 
+terminal OPENCURLY :
+	'{'
+;
+terminal CLOSEDCURLY :
+	'}'
+;

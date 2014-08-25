@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="MD Project Management"
+            icon="icons/releng_gears.gif"
+            class="com.lowcoupling.mdpm.perspective.perspectives.MDPMPerspective"
+            id="com.lowcoupling.perspective.perspectives.MDPMPerspective">
+      </perspective>
+   </extension>
+
+</plugin>

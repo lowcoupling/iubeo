@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            name="New Requirements Model"
+            icon="icons/req_icon.png"
+            category="org.eclipse.mdpm.project.wizard"
+            class="com.lowcoupling.mdpm.files.rml.wizards.RmlNewWizard"
+            id="org.eclipse.mdpm.files.rml.wizards.RmlNewWizard">
+      </wizard>
+   </extension>
+
+</plugin>

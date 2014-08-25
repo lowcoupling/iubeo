@@ -1,0 +1,23 @@
+grammar com.lowcoupling.mdpm.lng.resources.Resources with org.eclipse.xtext.common.Terminals
+
+generate resources "http://www.lowcoupling.com/mdpm/lng/resources/Resources"
+
+Resources:
+	resourceGroups+=ResourceGroup*
+	resources += Resource*
+;
+	
+ResourceGroup:
+	'Group' name=ID '{'
+		'id' id = ID';'
+		'cost' cost = INT (costLabel=STRING)?';'
+		'type' type = STRING';'
+	'}'
+;
+
+Resource:
+	'Resource' name = ID'{'
+		'type' type = [ResourceGroup]';'
+		
+	'}'	
+;

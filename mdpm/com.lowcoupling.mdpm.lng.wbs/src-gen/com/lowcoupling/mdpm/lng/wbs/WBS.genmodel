@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.lowcoupling.mdpm.lng.wbs/src-gen" editDirectory="/com.lowcoupling.mdpm.lng.wbs.edit/src"
+    editorDirectory="/com.lowcoupling.mdpm.lng.wbs.editor/src" modelPluginID="com.lowcoupling.mdpm.lng.wbs"
+    forceOverwrite="true" modelName="WBS" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="com.lowcoupling.mdpm.lng.wbs.edit"
+    editorPluginID="com.lowcoupling.mdpm.lng.wbs.editor" runtimeVersion="2.10" usedGenPackages="../../../../../../../com.lowcoupling.mdpm.lng.rml/model/generated/RML.genmodel#//rML">
+  <genPackages prefix="WBS" basePackage="com.lowcoupling.mdpm.lng.wbs" disposableProviderFactory="true"
+      ecorePackage="WBS.ecore#/">
+    <genClasses ecoreClass="WBS.ecore#//WBS">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WBS.ecore#//WBS/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WBS.ecore#//WBS/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WBS.ecore#//WBS/requirementsModel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WBS.ecore#//WBS/requirements"/>
+    </genClasses>
+    <genClasses ecoreClass="WBS.ecore#//WBSProgram">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WBS.ecore#//WBSProgram/projects"/>
+    </genClasses>
+    <genClasses ecoreClass="WBS.ecore#//WBSProject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WBS.ecore#//WBSProject/wbsNodes"/>
+    </genClasses>
+    <genClasses ecoreClass="WBS.ecore#//WBSNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WBS.ecore#//WBSNode/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WBS.ecore#//WBSNode/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WBS.ecore#//WBSNode/wbsNodes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WBS.ecore#//WBSNode/requirements"/>
+    </genClasses>
+    <genClasses ecoreClass="WBS.ecore#//WBSActivity"/>
+    <genClasses ecoreClass="WBS.ecore#//WBSWorkPackage"/>
+    <genClasses ecoreClass="WBS.ecore#//WBSDeliverable"/>
+    <genClasses ecoreClass="WBS.ecore#//RequirementImport">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WBS.ecore#//RequirementImport/importURI"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

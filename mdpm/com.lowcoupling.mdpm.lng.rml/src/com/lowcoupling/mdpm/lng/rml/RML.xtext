@@ -1,0 +1,20 @@
+grammar com.lowcoupling.mdpm.lng.rml.RML with org.eclipse.xtext.common.Terminals
+
+generate rML "http://www.lowcoupling.com/lng/rml/RML"
+
+Model:
+	packages+=REQPackage*;
+	
+REQPackage:
+	'package' name=ID '{'
+		(package +=REQPackage*)?
+		requirements+=REQRequirement*
+	'}'
+;
+REQRequirement:
+	'req' name=ID text = STRING ';'
+	;
+
+REQNode:
+	REQPackage|REQRequirement
+;

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.lowcoupling.mdpm.lng.pbs/src-gen" editDirectory="/com.lowcoupling.mdpm.lng.pbs.edit/src"
+    editorDirectory="/com.lowcoupling.mdpm.lng.pbs.editor/src" modelPluginID="com.lowcoupling.mdpm.lng.pbs"
+    forceOverwrite="true" modelName="PBS" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="com.lowcoupling.mdpm.lng.pbs.edit"
+    editorPluginID="com.lowcoupling.mdpm.lng.pbs.editor" runtimeVersion="2.9">
+  <genPackages prefix="PBS" basePackage="com.lowcoupling.mdpm.lng.pbs" disposableProviderFactory="true"
+      fileExtensions="pbs" ecorePackage="PBS.ecore#/">
+    <genClasses ecoreClass="PBS.ecore#//PBS"/>
+    <genClasses ecoreClass="PBS.ecore#//Product">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PBS.ecore#//Product/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PBS.ecore#//Product/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PBS.ecore#//Product/parts"/>
+    </genClasses>
+    <genClasses ecoreClass="PBS.ecore#//Part">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PBS.ecore#//Part/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute PBS.ecore#//Part/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference PBS.ecore#//Part/parts"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.lowcoupling.mdpm.lng.resources/src-gen" editDirectory="/com.lowcoupling.mdpm.lng.resources.edit/src"
+    editorDirectory="/com.lowcoupling.mdpm.lng.resources.editor/src" modelPluginID="com.lowcoupling.mdpm.lng.resources"
+    forceOverwrite="true" modelName="Resources" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="com.lowcoupling.mdpm.lng.resources.edit"
+    editorPluginID="com.lowcoupling.mdpm.lng.resources.editor" runtimeVersion="2.9">
+  <genPackages prefix="Resources" basePackage="com.lowcoupling.mdpm.lng.resources"
+      disposableProviderFactory="true" ecorePackage="Resources.ecore#/">
+    <genClasses ecoreClass="Resources.ecore#//Resources">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Resources.ecore#//Resources/resourceGroups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Resources.ecore#//Resources/resources"/>
+    </genClasses>
+    <genClasses ecoreClass="Resources.ecore#//ResourceGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Resources.ecore#//ResourceGroup/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Resources.ecore#//ResourceGroup/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Resources.ecore#//ResourceGroup/cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Resources.ecore#//ResourceGroup/costLabel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Resources.ecore#//ResourceGroup/type"/>
+    </genClasses>
+    <genClasses ecoreClass="Resources.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Resources.ecore#//Resource/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Resources.ecore#//Resource/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

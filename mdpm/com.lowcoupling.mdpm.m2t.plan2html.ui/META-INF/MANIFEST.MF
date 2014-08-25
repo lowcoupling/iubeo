@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Acceleo Project Management Plan Module IDE Plug-in
+Bundle-SymbolicName: com.lowcoupling.mdpm.m2t.plan2html.ui;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: com.lowcoupling.mdpm.m2t.plan2html.ui.Activator
+Bundle-Vendor: LowCoupling
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ com.lowcoupling.mdpm.m2t.plan2html,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.ocl,
+ org.eclipse.ocl.ecore,
+ org.eclipse.acceleo.model,
+ org.eclipse.acceleo.engine,
+ com.lowcoupling.mdpm.commons;bundle-version="0.0.1"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Eclipse-LazyStart: true
+Export-Package: com.lowcoupling.mdpm.m2t.plan2html.ui.common

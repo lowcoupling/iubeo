@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: MDPM Console
+Bundle-SymbolicName: com.lowcoupling.mdpm.console;singleton:=true
+Bundle-Version: 0.0.1.qualifier
+Bundle-Activator: com.lowcoupling.mdpm.console.Activator
+Bundle-Vendor: LowCoupling
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.xtext,
+ org.eclipse.xtext.ui,
+ org.eclipse.swt
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.emf.common.util,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.resource,
+ org.eclipse.emf.ecore.resource.impl,
+ org.eclipse.jface.text,
+ org.eclipse.ui.console,
+ org.eclipse.xtext.resource,
+ org.eclipse.xtext.ui.editor,
+ org.eclipse.xtext.ui.editor.outline.impl,
+ org.eclipse.xtext.util.concurrent

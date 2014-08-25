@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            id="com.lowcoupling.mdpm.lng.wbs.editor.wbsDiagramType"
+            name="WBS Diagram"
+            type="wbsDiagram">
+      </diagramType>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            class="com.lowcoupling.mdpm.lng.wbs.editor.WBSDiagramProvider"
+            id="com.lowcoupling.mdpm.lng.wbs.editor.wbsDiagramTypeProvider"
+            name="WBS Editor">
+         <diagramType
+               id="com.lowcoupling.mdpm.lng.wbs.editor.wbsDiagramType">
+         </diagramType>
+      </diagramTypeProvider>
+   </extension>
+
+</plugin>
