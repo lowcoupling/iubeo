@@ -5,7 +5,7 @@
    <extension
          point="org.eclipse.ui.newWizards">
       <category
-            name="Model Driven Project Management Wizards"
+            name="Iubeo Wizards"
             id="org.eclipse.mdpm.project.wizard">
       </category>
       <wizard
@@ -13,7 +13,7 @@
             class="com.lowcoupling.mdpm.project.wizard.wizards.MDPMNewWizard"
             icon="icons/sample.gif"
             id="org.eclipse.mdpm.project.wizard.wizards.MDPMNewWizard"
-            name="New MDPM Project"
+            name="New Iubeo Project"
             project="true">
       </wizard>
    </extension>
