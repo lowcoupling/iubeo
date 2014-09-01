@@ -108,21 +108,319 @@ p {
       </div>
     </div>
 
-      <div class="container">
+      <div class="container" style="color:#fff;">
      <div row style="margin-top:50px">
-     <h3>A Iubeo Project</h3>
-     <p>this is a test doc</p>
+      <a name="index"> <h1 style="color:#eaf1f1"> Index</h1> </a>
+      <ul>
+      <li><a href="#project"> Defining a new Project </a></li>
+      <li><a href="#requirements"> Modeling Requirements  </a></li>
+      <li><a href="#wbs"> Modeling a Work Breakdown Structure</a></li>
+      <li><a href="#resources"> Modeling Resources </a></li>
+      <li><a href="#project"> MOdeling Plans</a></li>
+      </ul>
+     <a name="project"><h3>A Iubeo Project</h3></a>
+     <p>A Iubeo project consists of a set of folders representing the different stages of a project according to the 
+      Project Management Institute (PMI) Framework: Initiating, Planning, Executing, Closing. 
+      </p>
+      The initiating phase is the phase in which the first requirements of the project are gathered, the project manager
+      is chosen, a project charter is defined.
+      <p>
+      The planning phase is the phase in which the project manager starts refining
+      the project's requirements and creates a work breack down structure (WBS) representing the main activities, work packages 
+      and deliverables of the projects. The Project Manager identifies the resources that will be involved and
+      starts planning the necessary activities.
+      </p>
+      <p>
+      The Project execution is the phase in which the project work is done, according to the plan and thus aimed at
+      satisfying the projects' requirements. Monitor and Control processes shall be periodically performed to 
+      identifies possible chagnes in the project's scope and verifies the quality of the perfomed work is inline with the
+      adopted standards.  		
+      </p>
+      <p>
+      The Close phase is aimed at formally veryfying the produced deliverables satisfies the related requirements. In 
+      the close phase contrats with possible suppliers are also formally verified and closed. 
+      </p>
+      <p>
+      Inside the folders that you will find in a new Iubeo project you can define models in textual domain specific
+      languages representing the main aspects of each project management activity. At now Iubeo provides domain 
+      specific languages aimed at representing: requirements, work breakdown structures, resources and plans. 
+      </p>
+      
+      <p>In order to create a new Iube project right click on the Project Explorer white area, choose NEw, Other and, 
+      in the dialog that will pop up choose Iubeo Project</p>	 
      <img class="img-thumbnail center" src="images/ibshot1.png">
+     <p>choose a project name! In this example we are going to see how to manage the project of an android application</p>
      <img class="img-thumbnail center" src="images/ibshot2.png">
+     <p>The following project structure will be created with example models that will help you to get started quickly</p>
      <img class="img-thumbnail center" src="images/ibshot3.png">
-     <h3>Defining Requirements</h3>
-     <p>this is a test doc</p>
+     
+    <a name="requirements"><h3>Defining Requirements</h3></a>
+     <p>As you can see the initiating folder is empty and we need to create a new requirements model. Right click on the 
+     folder and choose New, Other and, in the dialog that will pop up, choose Requirements Model
+     </p>
      <img class="img-thumbnail center" src="images/ibshot4.png">
+     <p>The new file is not empty. It contains a simple example of how you can use RML (Requirements Modeling Language) the
+      language provided by Iubeo to model requirements. Basically requirements are defined by means of the keyword 'req' and 
+      are contained in packages defined by the keyword 'package' and ecnlosed in curly brackets. Pacakges can be nested.</p>
      <img class="img-thumbnail center" src="images/ibshot5.png">
+     <p>In the following figure you can see how to use the RML langauge to model big set of requirements that are 
+     can also be nicely depicted in the Eclipse Outline. Defining requirements in Iubeo is important because, through the
+     requirements model  you can import and relate requirements in WBS in order to state what are the
+     requirements satisfied that activities workpackges and deliverables.</p> 
+     
+<p>
+<span class="label label-info"> info </span> &nbsp; We are working hard for a seamless integration of Iubeo with IBM DOORS. </p>
+
      <img class="img-thumbnail center" src="images/ibshot6.png">
-     <h3>Defining a WBS</h3>
-     <p>this is a test doc</p>
+     
+    <a name="wbs"><h3>Defining a WBS</h3></a>
+     <p>A work breackdown structure is a tree structured decomposition of the the project's activities and deliverables.
+     The leaves of the structures should be deliverables or work packages that are '<i>easy</i>' to manage (i.e. few hours, etc.).
+     </p>
+     <pre> 
+     <b style="color:#CD3278"> Project </b> AndroidApplication{
+		<b style="color:#CD3278"> req_import </b> "app_requirements.rml";		
+		<b style="color:#CD3278">WorkPackage</b> ProjectManagement{
+			<b style="color:#CD3278">Deliverable</b> ProejctManagementPlan; <b style="color:#CD3278">Deliverable </b> ProjectStatusReport;
+		}
+		<b style="color:#CD3278">WorkPackage</b> RequirementGathering{
+			Deliverable ProjectRequirements;		
+		}	
+		<b style="color:#CD3278">Activity</b> Design{
+			<b style="color:#CD3278">WorkPackage </b>UserInterfaceDesign{
+				<b style="color:#CD3278">Deliverable</b> UIDescriptionDocument;
+				<b style="color:#CD3278">requirements</b> { requirementSet.loginPanel; requirementSet.mainActivity; }
+			}
+			<b style="color:#CD3278">WorkPackage</b> SystemArchitectureDesign{
+				<b style="color:#CD3278">Deliverable</b> SoftwareDesignDescription;
+				<b style="color:#CD3278">requirements</b> { requirementSet; }
+			}
+		}
+		<b style="color:#CD3278">Activity </b>Development { <b style="color:#CD3278">Deliverable</b> SourceCode;}
+		<b style="color:#CD3278">Activity </b>Testing{ <b style="color:#CD3278">Deliverable</b> TestsCode; <b style="color:#CD3278">Deliverable</b> TestDescription; <b style="color:#CD3278">Deliverable</b> TestResults;}
+     }
+     </pre>
+     <p>In the following picture you see the WBS model in Iubeo and how it is depicted by the WBS view</p>
      <img class="img-thumbnail center" src="images/ibshot7.png">
+     <a name="resources"><h3>Modeling Resources </h3> </a>
+     <pre>
+	//Start defining  group of resources
+Group ProjectManager{
+	id	sweng;
+	cost	100;
+	type	'PERSON';
+}
+
+Group SoftwareDeveloper{
+	id	swdev;
+	cost	100;
+	type	'PERSON';
+}
+
+Group WorkStation{
+	id	pc;
+	cost	2000;
+	type	'PC';
+}
+
+//then define single resources
+Resource	Tom{
+	type	ProjectManager;
+}
+Resource	Mike{
+	type	SoftwareDeveloper;
+}
+     </pre>
+     <img class="img-thumbnail center" src="images/ibshot9.png">
+     <a name="plans"><h3>Modeling Plans</h3> </a>
+     
+	<img class="img-thumbnail center" src="images/ibshot10.png">
+     <img class="img-thumbnail center" src="images/ibshot11.png">
+     <img class="img-thumbnail center" src="images/ibshot12.png">
+     <pre>
+Program AndroidApplication {
+	
+Project ProjectManagement{
+	
+	//define the long name of the project in this plan
+	name "Android Application";
+	//import (optional) the wbs of the project
+	wbs "../1_Initiating/app_wbs.wbs" project AndroidApplication;
+	//import (optional) the description of the resources (human resources included)
+	resources "../1_Initiating/resourcesExample.resources";
+
+	//now we start defining activities
+    /*relates to all the project management activities*/
+	Group ProjectManagement{
+	
+	/*
+	 *  daily meetings and project status report definition
+	 */
+	Activity Mgmt{
+		involves {
+			Mike at 100%;
+			Tom at 20%;
+		}
+		wbsActivity AndroidApplication.ProjectManagement;
+		starts '1/1/2015';
+		duration 5;
+		completeness 0%;
+	}
+	
+	CheckPoint StatusReport{
+		after AndroidApplication.ProjectManagement.ProjectManagement.Mgmt offset 1;
+		completeness 0 %;
+		dependsOn AndroidApplication.ProjectManagement.ProjectManagement.Mgmt;
+	}
+	
+	
+	/*
+	 *  daily meetings and project status report definition
+	 */
+	Activity Mgmt2 {
+		after AndroidApplication.ProjectManagement.ProjectManagement.StatusReport offset 1;
+		duration 5;
+		completeness 0 %;
+		dependsOn AndroidApplication.ProjectManagement.ProjectManagement.StatusReport;
+	}
+	
+	CheckPoint StatusReport2{
+		after AndroidApplication.ProjectManagement.ProjectManagement.Mgmt2 offset 1;
+		completeness 0 %;
+		dependsOn AndroidApplication.ProjectManagement.ProjectManagement.Mgmt2;
+	}
+	
+	
+	/*
+	 *  daily meetings and project status report definition
+	 */
+	Activity Mgmt3 {
+		after AndroidApplication.ProjectManagement.ProjectManagement.StatusReport2 offset 1;
+		duration 5;
+		completeness 0 %;
+		dependsOn AndroidApplication.ProjectManagement.ProjectManagement.StatusReport2;
+	}
+	
+	CheckPoint StatusReport3{
+		after AndroidApplication.ProjectManagement.ProjectManagement.Mgmt3 offset 1;
+		completeness 0 %;
+		dependsOn AndroidApplication.ProjectManagement.ProjectManagement.Mgmt3;
+	}
+	
+	/*
+	 *  daily meetings and project status report definition
+	 */
+	Activity Mgmt4 {
+		after AndroidApplication.ProjectManagement.ProjectManagement.StatusReport3 offset 1;
+		duration 5;
+		completeness 0 %;
+		dependsOn AndroidApplication.ProjectManagement.ProjectManagement.StatusReport3;
+	}
+	
+	CheckPoint StatusReport4{
+		after AndroidApplication.ProjectManagement.ProjectManagement.Mgmt4 offset 1;
+		completeness 0 %;
+		dependsOn AndroidApplication.ProjectManagement.ProjectManagement.Mgmt4;
+	}
+	
+	/*
+	 *  daily meetings and project status report definition
+	 */
+	Activity Mgmt5 {
+		after AndroidApplication.ProjectManagement.ProjectManagement.StatusReport4 offset 1;
+		duration 5;
+		completeness 0 %;
+		dependsOn AndroidApplication.ProjectManagement.ProjectManagement.StatusReport4;
+	}
+	
+	CheckPoint StatusReport5{
+		after AndroidApplication.ProjectManagement.ProjectManagement.Mgmt5 offset 1;
+		completeness 0 %;
+		dependsOn AndroidApplication.ProjectManagement.ProjectManagement.Mgmt5;
+	}
+	}
+}
+Project ProjectWork{	
+	Activity Analysis {
+		involves {
+			Tom at 80%;
+		}
+		wbsActivity AndroidApplication.RequirementGathering;
+		starts '1/1/2015';
+		duration 5;
+		//ends '15/01/2013';
+		completeness 0%;
+	}
+	
+	CheckPoint ProjectRequirementsRelease {
+		wbsDeliverable AndroidApplication.RequirementGathering.ProjectRequirements;
+		after AndroidApplication.ProjectWork.Analysis offset 1;
+		completeness 0%;	
+		dependsOn AndroidApplication.ProjectWork.Analysis;
+	}
+	Activity Design {
+		involves {
+			Tom at 80%;
+		}
+		wbsActivity AndroidApplication.Design;
+		after AndroidApplication.ProjectWork.ProjectRequirementsRelease offset 1;
+		duration 5;
+		//ends '15/01/2013';
+		completeness 0%;
+		dependsOn AndroidApplication.ProjectWork.ProjectRequirementsRelease;
+		}
+		
+		CheckPoint SoftwareArchitectureRelease {
+		wbsDeliverable AndroidApplication.Design.SystemArchitectureDesign.SoftwareDesignDescription;
+		after AndroidApplication.ProjectWork.Design offset 1;
+		completeness 0%;
+		dependsOn AndroidApplication.ProjectWork.Design;	
+		}
+	
+		Activity Development {
+		involves {
+			Tom at 80%;
+		}
+		wbsActivity AndroidApplication.Development;
+		after AndroidApplication.ProjectWork.SoftwareArchitectureRelease offset 1;
+		duration 8;
+		//ends '15/01/2013';
+		completeness 0%;
+		dependsOn AndroidApplication.ProjectWork.SoftwareArchitectureRelease;
+		}
+		
+		CheckPoint SoftwareRelease {
+			wbsDeliverable AndroidApplication.Development.SourceCode;
+			after AndroidApplication.ProjectWork.Development offset 1;
+			completeness 0 %;
+			dependsOn AndroidApplication.ProjectWork.Development;
+		}
+	
+	
+		Activity Testing {
+			
+			involves {
+				Tom at 80%;
+			}
+		
+		wbsActivity AndroidApplication.Testing;
+		after AndroidApplication.ProjectWork.SoftwareRelease offset 1;
+		duration 2;
+		//ends '15/01/2013';
+		completeness 0%;
+		dependsOn  AndroidApplication.ProjectWork.SoftwareRelease;
+	}
+		CheckPoint TestResults {
+			wbsDeliverable AndroidApplication.Testing.TestResults;
+			after AndroidApplication.ProjectWork.Testing offset 3;
+			completeness 0 %;
+			dependsOn AndroidApplication.ProjectWork.Testing;
+		}
+}
+}
+
+     </pre>
+		
     </div>
 
       <!-- FOOTER -->
