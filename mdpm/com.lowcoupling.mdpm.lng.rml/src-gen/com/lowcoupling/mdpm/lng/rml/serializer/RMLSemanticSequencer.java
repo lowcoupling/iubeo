@@ -62,7 +62,7 @@ public class RMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID package+=REQPackage? requirements+=REQRequirement*)
+	 *     (name=ID package+=REQPackage* requirements+=REQRequirement*)
 	 */
 	protected void sequence_REQPackage(EObject context, REQPackage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

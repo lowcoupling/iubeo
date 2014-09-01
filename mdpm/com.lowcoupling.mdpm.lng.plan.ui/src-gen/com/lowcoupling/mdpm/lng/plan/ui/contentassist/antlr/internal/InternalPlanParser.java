@@ -17094,21 +17094,21 @@ public class InternalPlanParser extends AbstractInternalContentAssistParser {
             // ../com.lowcoupling.mdpm.lng.plan.ui/src-gen/com/lowcoupling/mdpm/lng/plan/ui/contentassist/antlr/internal/InternalPlan.g:6395:1: ( ( ruleQualifiedName ) )
             // ../com.lowcoupling.mdpm.lng.plan.ui/src-gen/com/lowcoupling/mdpm/lng/plan/ui/contentassist/antlr/internal/InternalPlan.g:6396:1: ( ruleQualifiedName )
             {
-             before(grammarAccess.getActivityGroupAccess().getWbsActivityWBSActivityCrossReference_5_1_0()); 
+             before(grammarAccess.getActivityGroupAccess().getWbsActivityWBSNodeCrossReference_5_1_0()); 
             // ../com.lowcoupling.mdpm.lng.plan.ui/src-gen/com/lowcoupling/mdpm/lng/plan/ui/contentassist/antlr/internal/InternalPlan.g:6397:1: ( ruleQualifiedName )
             // ../com.lowcoupling.mdpm.lng.plan.ui/src-gen/com/lowcoupling/mdpm/lng/plan/ui/contentassist/antlr/internal/InternalPlan.g:6398:1: ruleQualifiedName
             {
-             before(grammarAccess.getActivityGroupAccess().getWbsActivityWBSActivityQualifiedNameParserRuleCall_5_1_0_1()); 
+             before(grammarAccess.getActivityGroupAccess().getWbsActivityWBSNodeQualifiedNameParserRuleCall_5_1_0_1()); 
             pushFollow(FOLLOW_ruleQualifiedName_in_rule__ActivityGroup__WbsActivityAssignment_5_113085);
             ruleQualifiedName();
 
             state._fsp--;
 
-             after(grammarAccess.getActivityGroupAccess().getWbsActivityWBSActivityQualifiedNameParserRuleCall_5_1_0_1()); 
+             after(grammarAccess.getActivityGroupAccess().getWbsActivityWBSNodeQualifiedNameParserRuleCall_5_1_0_1()); 
 
             }
 
-             after(grammarAccess.getActivityGroupAccess().getWbsActivityWBSActivityCrossReference_5_1_0()); 
+             after(grammarAccess.getActivityGroupAccess().getWbsActivityWBSNodeCrossReference_5_1_0()); 
 
             }
 
@@ -17988,21 +17988,21 @@ public class InternalPlanParser extends AbstractInternalContentAssistParser {
             // ../com.lowcoupling.mdpm.lng.plan.ui/src-gen/com/lowcoupling/mdpm/lng/plan/ui/contentassist/antlr/internal/InternalPlan.g:6749:1: ( ( ruleQualifiedName ) )
             // ../com.lowcoupling.mdpm.lng.plan.ui/src-gen/com/lowcoupling/mdpm/lng/plan/ui/contentassist/antlr/internal/InternalPlan.g:6750:1: ( ruleQualifiedName )
             {
-             before(grammarAccess.getActivityAccess().getWbsActivityWBSActivityCrossReference_6_1_0()); 
+             before(grammarAccess.getActivityAccess().getWbsActivityWBSNodeCrossReference_6_1_0()); 
             // ../com.lowcoupling.mdpm.lng.plan.ui/src-gen/com/lowcoupling/mdpm/lng/plan/ui/contentassist/antlr/internal/InternalPlan.g:6751:1: ( ruleQualifiedName )
             // ../com.lowcoupling.mdpm.lng.plan.ui/src-gen/com/lowcoupling/mdpm/lng/plan/ui/contentassist/antlr/internal/InternalPlan.g:6752:1: ruleQualifiedName
             {
-             before(grammarAccess.getActivityAccess().getWbsActivityWBSActivityQualifiedNameParserRuleCall_6_1_0_1()); 
+             before(grammarAccess.getActivityAccess().getWbsActivityWBSNodeQualifiedNameParserRuleCall_6_1_0_1()); 
             pushFollow(FOLLOW_ruleQualifiedName_in_rule__Activity__WbsActivityAssignment_6_113815);
             ruleQualifiedName();
 
             state._fsp--;
 
-             after(grammarAccess.getActivityAccess().getWbsActivityWBSActivityQualifiedNameParserRuleCall_6_1_0_1()); 
+             after(grammarAccess.getActivityAccess().getWbsActivityWBSNodeQualifiedNameParserRuleCall_6_1_0_1()); 
 
             }
 
-             after(grammarAccess.getActivityAccess().getWbsActivityWBSActivityCrossReference_6_1_0()); 
+             after(grammarAccess.getActivityAccess().getWbsActivityWBSNodeCrossReference_6_1_0()); 
 
             }
 
@@ -18315,10 +18315,10 @@ public class InternalPlanParser extends AbstractInternalContentAssistParser {
     static final String DFA46_eofS =
         "\1\6\55\uffff";
     static final String DFA46_minS =
-        "\1\5\1\31\1\6\1\10\1\6\1\11\1\uffff\1\4\1\15\1\37\1\46\1\0\1\5"+
-        "\1\6\1\11\1\15\1\uffff\1\10\1\6\1\11\1\0\1\37\1\15\1\5\1\15\1\37"+
-        "\1\46\1\5\1\6\1\5\1\6\1\11\1\15\1\6\1\5\1\37\1\15\1\5\1\6\1\5\3"+
-        "\6\1\5\2\6";
+        "\1\5\1\31\1\6\1\10\1\6\1\11\1\uffff\1\4\1\15\1\37\1\46\1\0\1\5\1"+
+        "\6\1\11\1\15\1\uffff\1\10\1\6\1\11\1\0\1\37\1\15\1\5\1\15\1\37\1"+
+        "\46\1\5\1\6\1\5\1\6\1\11\1\15\1\6\1\5\1\37\1\15\1\5\1\6\1\5\3\6"+
+        "\1\5\2\6";
     static final String DFA46_maxS =
         "\2\51\1\6\1\10\1\6\1\11\1\uffff\1\4\1\15\1\44\1\46\1\0\1\45\1\6"+
         "\1\11\1\15\1\uffff\1\10\1\6\1\11\1\0\1\44\1\15\1\45\1\15\1\44\1"+

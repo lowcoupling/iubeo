@@ -2,7 +2,7 @@
  */
 package com.lowcoupling.mdpm.lng.plan.plan;
 
-import com.lowcoupling.mdpm.lng.wbs.wBS.WBSActivity;
+import com.lowcoupling.mdpm.lng.wbs.wBS.WBSNode;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -27,7 +27,7 @@ public interface ActivityGroup extends ActivityElement
 {
   /**
    * Returns the value of the '<em><b>Wbs Activity</b></em>' reference list.
-   * The list contents are of type {@link com.lowcoupling.mdpm.lng.wbs.wBS.WBSActivity}.
+   * The list contents are of type {@link com.lowcoupling.mdpm.lng.wbs.wBS.WBSNode}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Wbs Activity</em>' reference list isn't clear,
@@ -39,7 +39,7 @@ public interface ActivityGroup extends ActivityElement
    * @model
    * @generated
    */
-  EList<WBSActivity> getWbsActivity();
+  EList<WBSNode> getWbsActivity();
 
   /**
    * Returns the value of the '<em><b>Activities</b></em>' containment reference list.

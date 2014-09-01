@@ -12,25 +12,25 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalWBSLexer extends Lexer {
-    public static final int RULE_ENDLINE=7;
-    public static final int RULE_OPENCURLY=6;
-    public static final int RULE_STRING=9;
-    public static final int RULE_SL_COMMENT=11;
-    public static final int T__19=19;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
-    public static final int T__14=14;
-    public static final int EOF=-1;
-    public static final int RULE_CLOSEDCURLY=8;
     public static final int RULE_ID=5;
-    public static final int RULE_WS=12;
-    public static final int RULE_ANY_OTHER=13;
-    public static final int RULE_INT=10;
-    public static final int RULE_ML_COMMENT=4;
-    public static final int T__20=20;
     public static final int T__21=21;
+    public static final int RULE_ANY_OTHER=13;
+    public static final int T__20=20;
+    public static final int EOF=-1;
+    public static final int RULE_SL_COMMENT=11;
+    public static final int RULE_ENDLINE=7;
+    public static final int RULE_ML_COMMENT=4;
+    public static final int T__19=19;
+    public static final int RULE_STRING=9;
+    public static final int T__16=16;
+    public static final int T__15=15;
+    public static final int T__18=18;
+    public static final int T__17=17;
+    public static final int RULE_CLOSEDCURLY=8;
+    public static final int T__14=14;
+    public static final int RULE_INT=10;
+    public static final int RULE_OPENCURLY=6;
+    public static final int RULE_WS=12;
 
     // delegates
     // delegators
@@ -925,27 +925,27 @@ public class InternalWBSLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\1\uffff\5\23\4\uffff\1\21\2\uffff\3\21\2\uffff\1\23\1\uffff\4"+
-        "\23\11\uffff\41\23\2\uffff\7\23\1\uffff\3\23\1\123\3\23\1\uffff"+
-        "\2\23\1\131\3\uffff";
+        "\1\uffff\5\23\4\uffff\1\21\2\uffff\3\21\2\uffff\1\23\1\uffff\4\23"+
+        "\11\uffff\41\23\2\uffff\7\23\1\uffff\3\23\1\123\3\23\1\uffff\2\23"+
+        "\1\131\3\uffff";
     static final String DFA12_eofS =
         "\132\uffff";
     static final String DFA12_minS =
-        "\1\0\1\162\1\145\1\143\1\157\1\145\4\uffff\1\101\2\uffff\2\0\1"+
-        "\52\2\uffff\1\157\1\uffff\1\161\1\164\1\162\1\154\11\uffff\1\147"+
-        "\1\137\1\151\1\153\1\151\1\162\1\145\2\151\1\166\1\120\1\166\1\141"+
+        "\1\0\1\162\1\145\1\143\1\157\1\145\4\uffff\1\101\2\uffff\2\0\1\52"+
+        "\2\uffff\1\157\1\uffff\1\161\1\164\1\162\1\154\11\uffff\1\147\1"+
+        "\137\1\151\1\153\1\151\1\162\1\145\2\151\1\166\1\120\1\166\1\141"+
         "\1\143\1\162\1\155\1\151\1\141\1\145\1\155\1\164\1\145\1\160\1\164"+
         "\1\143\1\162\2\40\1\155\1\157\1\171\1\153\1\141\2\uffff\1\145\1"+
         "\162\1\40\1\141\1\142\1\156\1\164\1\uffff\1\147\1\154\1\164\1\60"+
         "\2\145\1\163\1\uffff\2\40\1\60\3\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\162\1\145\1\143\1\157\1\145\4\uffff\1\172\2\uffff\2"+
-        "\uffff\1\57\2\uffff\1\157\1\uffff\1\161\1\164\1\162\1\154\11\uffff"+
-        "\1\152\1\165\1\151\1\153\1\151\1\162\1\145\2\151\1\166\1\120\1\166"+
-        "\1\141\1\143\1\162\1\155\1\151\1\141\1\145\1\155\1\164\1\145\1\160"+
-        "\1\164\1\143\1\162\2\40\1\155\1\157\1\171\1\153\1\141\2\uffff\1"+
-        "\145\1\162\1\40\1\141\1\142\1\156\1\164\1\uffff\1\147\1\154\1\164"+
-        "\1\172\2\145\1\163\1\uffff\2\40\1\172\3\uffff";
+        "\1\uffff\1\162\1\145\1\143\1\157\1\145\4\uffff\1\172\2\uffff\2\uffff"+
+        "\1\57\2\uffff\1\157\1\uffff\1\161\1\164\1\162\1\154\11\uffff\1\152"+
+        "\1\165\1\151\1\153\1\151\1\162\1\145\2\151\1\166\1\120\1\166\1\141"+
+        "\1\143\1\162\1\155\1\151\1\141\1\145\1\155\1\164\1\145\1\160\1\164"+
+        "\1\143\1\162\2\40\1\155\1\157\1\171\1\153\1\141\2\uffff\1\145\1"+
+        "\162\1\40\1\141\1\142\1\156\1\164\1\uffff\1\147\1\154\1\164\1\172"+
+        "\2\145\1\163\1\uffff\2\40\1\172\3\uffff";
     static final String DFA12_acceptS =
         "\6\uffff\1\7\1\11\1\12\1\13\1\uffff\1\14\1\15\3\uffff\1\21\1\22"+
         "\1\uffff\1\14\4\uffff\1\7\1\11\1\12\1\13\1\15\1\16\1\17\1\20\1\21"+

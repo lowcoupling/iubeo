@@ -256,7 +256,7 @@ rule__REQPackage__Group__3__Impl
 :
 (
 { before(grammarAccess.getREQPackageAccess().getPackageAssignment_3()); }
-(rule__REQPackage__PackageAssignment_3)?
+(rule__REQPackage__PackageAssignment_3)*
 { after(grammarAccess.getREQPackageAccess().getPackageAssignment_3()); }
 )
 

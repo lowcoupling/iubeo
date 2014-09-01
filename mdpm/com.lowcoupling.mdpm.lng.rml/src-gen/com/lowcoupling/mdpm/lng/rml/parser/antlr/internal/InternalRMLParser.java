@@ -24,18 +24,18 @@ public class InternalRMLParser extends AbstractInternalAntlrParser {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'{'", "'}'", "'req'", "';'"
     };
     public static final int RULE_ID=4;
-    public static final int RULE_WS=9;
     public static final int RULE_STRING=5;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int RULE_SL_COMMENT=8;
     public static final int T__15=15;
-    public static final int RULE_INT=6;
-    public static final int T__11=11;
-    public static final int RULE_ML_COMMENT=7;
     public static final int T__12=12;
-    public static final int T__13=13;
+    public static final int T__11=11;
     public static final int T__14=14;
+    public static final int T__13=13;
+    public static final int RULE_ANY_OTHER=10;
+    public static final int RULE_INT=6;
+    public static final int RULE_WS=9;
+    public static final int RULE_SL_COMMENT=8;
     public static final int EOF=-1;
+    public static final int RULE_ML_COMMENT=7;
 
     // delegates
     // delegators
@@ -228,7 +228,7 @@ public class InternalRMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleREQPackage"
-    // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:115:1: ruleREQPackage returns [EObject current=null] : (otherlv_0= 'package' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_package_3_0= ruleREQPackage ) )? ( (lv_requirements_4_0= ruleREQRequirement ) )* otherlv_5= '}' ) ;
+    // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:115:1: ruleREQPackage returns [EObject current=null] : (otherlv_0= 'package' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_package_3_0= ruleREQPackage ) )* ( (lv_requirements_4_0= ruleREQRequirement ) )* otherlv_5= '}' ) ;
     public final EObject ruleREQPackage() throws RecognitionException {
         EObject current = null;
 
@@ -244,11 +244,11 @@ public class InternalRMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:118:28: ( (otherlv_0= 'package' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_package_3_0= ruleREQPackage ) )? ( (lv_requirements_4_0= ruleREQRequirement ) )* otherlv_5= '}' ) )
-            // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:119:1: (otherlv_0= 'package' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_package_3_0= ruleREQPackage ) )? ( (lv_requirements_4_0= ruleREQRequirement ) )* otherlv_5= '}' )
+            // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:118:28: ( (otherlv_0= 'package' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_package_3_0= ruleREQPackage ) )* ( (lv_requirements_4_0= ruleREQRequirement ) )* otherlv_5= '}' ) )
+            // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:119:1: (otherlv_0= 'package' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_package_3_0= ruleREQPackage ) )* ( (lv_requirements_4_0= ruleREQRequirement ) )* otherlv_5= '}' )
             {
-            // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:119:1: (otherlv_0= 'package' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_package_3_0= ruleREQPackage ) )? ( (lv_requirements_4_0= ruleREQRequirement ) )* otherlv_5= '}' )
-            // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:119:3: otherlv_0= 'package' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_package_3_0= ruleREQPackage ) )? ( (lv_requirements_4_0= ruleREQRequirement ) )* otherlv_5= '}'
+            // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:119:1: (otherlv_0= 'package' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_package_3_0= ruleREQPackage ) )* ( (lv_requirements_4_0= ruleREQRequirement ) )* otherlv_5= '}' )
+            // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:119:3: otherlv_0= 'package' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_package_3_0= ruleREQPackage ) )* ( (lv_requirements_4_0= ruleREQRequirement ) )* otherlv_5= '}'
             {
             otherlv_0=(Token)match(input,11,FOLLOW_11_in_ruleREQPackage213); 
 
@@ -284,47 +284,54 @@ public class InternalRMLParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_2, grammarAccess.getREQPackageAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:145:1: ( (lv_package_3_0= ruleREQPackage ) )?
-            int alt2=2;
-            int LA2_0 = input.LA(1);
+            // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:145:1: ( (lv_package_3_0= ruleREQPackage ) )*
+            loop2:
+            do {
+                int alt2=2;
+                int LA2_0 = input.LA(1);
 
-            if ( (LA2_0==11) ) {
-                alt2=1;
-            }
-            switch (alt2) {
-                case 1 :
-                    // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:146:1: (lv_package_3_0= ruleREQPackage )
-                    {
-                    // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:146:1: (lv_package_3_0= ruleREQPackage )
-                    // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:147:3: lv_package_3_0= ruleREQPackage
-                    {
-                     
-                    	        newCompositeNode(grammarAccess.getREQPackageAccess().getPackageREQPackageParserRuleCall_3_0()); 
-                    	    
-                    pushFollow(FOLLOW_ruleREQPackage_in_ruleREQPackage268);
-                    lv_package_3_0=ruleREQPackage();
-
-                    state._fsp--;
+                if ( (LA2_0==11) ) {
+                    alt2=1;
+                }
 
 
-                    	        if (current==null) {
-                    	            current = createModelElementForParent(grammarAccess.getREQPackageRule());
-                    	        }
-                           		add(
-                           			current, 
-                           			"package",
-                            		lv_package_3_0, 
-                            		"REQPackage");
-                    	        afterParserOrEnumRuleCall();
-                    	    
+                switch (alt2) {
+            	case 1 :
+            	    // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:146:1: (lv_package_3_0= ruleREQPackage )
+            	    {
+            	    // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:146:1: (lv_package_3_0= ruleREQPackage )
+            	    // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:147:3: lv_package_3_0= ruleREQPackage
+            	    {
+            	     
+            	    	        newCompositeNode(grammarAccess.getREQPackageAccess().getPackageREQPackageParserRuleCall_3_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_ruleREQPackage_in_ruleREQPackage268);
+            	    lv_package_3_0=ruleREQPackage();
 
-                    }
+            	    state._fsp--;
 
 
-                    }
-                    break;
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getREQPackageRule());
+            	    	        }
+            	           		add(
+            	           			current, 
+            	           			"package",
+            	            		lv_package_3_0, 
+            	            		"REQPackage");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
 
-            }
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop2;
+                }
+            } while (true);
 
             // ../com.lowcoupling.mdpm.lng.rml/src-gen/com/lowcoupling/mdpm/lng/rml/parser/antlr/internal/InternalRML.g:163:3: ( (lv_requirements_4_0= ruleREQRequirement ) )*
             loop3:
@@ -546,7 +553,7 @@ public class InternalRMLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_11_in_ruleREQPackage213 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleREQPackage230 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_12_in_ruleREQPackage247 = new BitSet(new long[]{0x0000000000006800L});
-    public static final BitSet FOLLOW_ruleREQPackage_in_ruleREQPackage268 = new BitSet(new long[]{0x0000000000006000L});
+    public static final BitSet FOLLOW_ruleREQPackage_in_ruleREQPackage268 = new BitSet(new long[]{0x0000000000006800L});
     public static final BitSet FOLLOW_ruleREQRequirement_in_ruleREQPackage290 = new BitSet(new long[]{0x0000000000006000L});
     public static final BitSet FOLLOW_13_in_ruleREQPackage303 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleREQRequirement_in_entryRuleREQRequirement339 = new BitSet(new long[]{0x0000000000000000L});

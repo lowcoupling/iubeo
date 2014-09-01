@@ -48,10 +48,10 @@ public class RMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//REQPackage:
-		//	"package" name=ID "{" package+=REQPackage? requirements+=REQRequirement* "}";
+		//	"package" name=ID "{" package+=REQPackage* requirements+=REQRequirement* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"package" name=ID "{" package+=REQPackage? requirements+=REQRequirement* "}"
+		//"package" name=ID "{" package+=REQPackage* requirements+=REQRequirement* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"package"
@@ -66,7 +66,7 @@ public class RMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//package+=REQPackage?
+		//package+=REQPackage*
 		public Assignment getPackageAssignment_3() { return cPackageAssignment_3; }
 
 		//REQPackage
@@ -193,7 +193,7 @@ public class RMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//REQPackage:
-	//	"package" name=ID "{" package+=REQPackage? requirements+=REQRequirement* "}";
+	//	"package" name=ID "{" package+=REQPackage* requirements+=REQRequirement* "}";
 	public REQPackageElements getREQPackageAccess() {
 		return (pREQPackage != null) ? pREQPackage : (pREQPackage = new REQPackageElements());
 	}

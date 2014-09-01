@@ -25,18 +25,18 @@ public class InternalRMLParser extends AbstractInternalContentAssistParser {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'{'", "'}'", "'req'", "';'"
     };
     public static final int RULE_ID=4;
-    public static final int RULE_WS=9;
     public static final int RULE_STRING=5;
-    public static final int RULE_ANY_OTHER=10;
-    public static final int RULE_SL_COMMENT=8;
     public static final int T__15=15;
-    public static final int RULE_INT=6;
-    public static final int T__11=11;
-    public static final int RULE_ML_COMMENT=7;
     public static final int T__12=12;
-    public static final int T__13=13;
+    public static final int T__11=11;
     public static final int T__14=14;
+    public static final int T__13=13;
+    public static final int RULE_ANY_OTHER=10;
+    public static final int RULE_INT=6;
+    public static final int RULE_WS=9;
+    public static final int RULE_SL_COMMENT=8;
     public static final int EOF=-1;
+    public static final int RULE_ML_COMMENT=7;
 
     // delegates
     // delegators
@@ -598,40 +598,47 @@ public class InternalRMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__REQPackage__Group__3__Impl"
-    // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:252:1: rule__REQPackage__Group__3__Impl : ( ( rule__REQPackage__PackageAssignment_3 )? ) ;
+    // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:252:1: rule__REQPackage__Group__3__Impl : ( ( rule__REQPackage__PackageAssignment_3 )* ) ;
     public final void rule__REQPackage__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:256:1: ( ( ( rule__REQPackage__PackageAssignment_3 )? ) )
-            // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:257:1: ( ( rule__REQPackage__PackageAssignment_3 )? )
+            // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:256:1: ( ( ( rule__REQPackage__PackageAssignment_3 )* ) )
+            // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:257:1: ( ( rule__REQPackage__PackageAssignment_3 )* )
             {
-            // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:257:1: ( ( rule__REQPackage__PackageAssignment_3 )? )
-            // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:258:1: ( rule__REQPackage__PackageAssignment_3 )?
+            // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:257:1: ( ( rule__REQPackage__PackageAssignment_3 )* )
+            // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:258:1: ( rule__REQPackage__PackageAssignment_3 )*
             {
              before(grammarAccess.getREQPackageAccess().getPackageAssignment_3()); 
-            // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:259:1: ( rule__REQPackage__PackageAssignment_3 )?
-            int alt2=2;
-            int LA2_0 = input.LA(1);
+            // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:259:1: ( rule__REQPackage__PackageAssignment_3 )*
+            loop2:
+            do {
+                int alt2=2;
+                int LA2_0 = input.LA(1);
 
-            if ( (LA2_0==11) ) {
-                alt2=1;
-            }
-            switch (alt2) {
-                case 1 :
-                    // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:259:2: rule__REQPackage__PackageAssignment_3
-                    {
-                    pushFollow(FOLLOW_rule__REQPackage__PackageAssignment_3_in_rule__REQPackage__Group__3__Impl466);
-                    rule__REQPackage__PackageAssignment_3();
-
-                    state._fsp--;
+                if ( (LA2_0==11) ) {
+                    alt2=1;
+                }
 
 
-                    }
-                    break;
+                switch (alt2) {
+            	case 1 :
+            	    // ../com.lowcoupling.mdpm.lng.rml.ui/src-gen/com/lowcoupling/mdpm/lng/rml/ui/contentassist/antlr/internal/InternalRML.g:259:2: rule__REQPackage__PackageAssignment_3
+            	    {
+            	    pushFollow(FOLLOW_rule__REQPackage__PackageAssignment_3_in_rule__REQPackage__Group__3__Impl466);
+            	    rule__REQPackage__PackageAssignment_3();
 
-            }
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop2;
+                }
+            } while (true);
 
              after(grammarAccess.getREQPackageAccess().getPackageAssignment_3()); 
 
@@ -1401,7 +1408,7 @@ public class InternalRMLParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_12_in_rule__REQPackage__Group__2__Impl405 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__REQPackage__Group__3__Impl_in_rule__REQPackage__Group__3436 = new BitSet(new long[]{0x0000000000006800L});
     public static final BitSet FOLLOW_rule__REQPackage__Group__4_in_rule__REQPackage__Group__3439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__REQPackage__PackageAssignment_3_in_rule__REQPackage__Group__3__Impl466 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__REQPackage__PackageAssignment_3_in_rule__REQPackage__Group__3__Impl466 = new BitSet(new long[]{0x0000000000000802L});
     public static final BitSet FOLLOW_rule__REQPackage__Group__4__Impl_in_rule__REQPackage__Group__4497 = new BitSet(new long[]{0x0000000000006800L});
     public static final BitSet FOLLOW_rule__REQPackage__Group__5_in_rule__REQPackage__Group__4500 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__REQPackage__RequirementsAssignment_4_in_rule__REQPackage__Group__4__Impl527 = new BitSet(new long[]{0x0000000000004002L});

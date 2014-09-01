@@ -15,7 +15,7 @@ WBSProgram:
 	 (requirementsModel+=RequirementImport ENDLINE)*	
 	 (projects+=WBSProject)*
 	 ('requirements'OPENCURLY	 	
-	 	(requirements+= [rml::REQNode|QualifiedName]ENDLINE)?
+	 	(requirements+= [rml::REQNode|QualifiedName]ENDLINE)*
 	 CLOSEDCURLY)?
 	 CLOSEDCURLY
 ;
@@ -26,7 +26,7 @@ WBSProgram:
 	 (requirementsModel+=RequirementImport ENDLINE)*	
 	 (wbsNodes+=WBSNode)*
 	 ('requirements'OPENCURLY
-	 	(requirements+= [rml::REQNode|QualifiedName]ENDLINE)?
+	 	(requirements+= [rml::REQNode|QualifiedName]ENDLINE)*
 	 CLOSEDCURLY)?
 	 CLOSEDCURLY
 ;
@@ -44,7 +44,7 @@ WBSActivity:
 			OPENCURLY
 				(wbsNodes+=WBSNode*)
 				('requirements'OPENCURLY
-	 			(requirements+= [rml::REQNode|QualifiedName]ENDLINE)?
+	 			(requirements+= [rml::REQNode|QualifiedName]ENDLINE)*
 	 			CLOSEDCURLY)?
 			CLOSEDCURLY 
 	) | ENDLINE)
@@ -57,7 +57,7 @@ WBSWorkPackage:
 			OPENCURLY
 				(wbsNodes+=WBSNode*)
 				('requirements'OPENCURLY
-	 			(requirements+= [rml::REQNode|QualifiedName]ENDLINE)?
+	 			(requirements+= [rml::REQNode|QualifiedName]ENDLINE)*
 			    CLOSEDCURLY)?
 			CLOSEDCURLY 
 	) | ENDLINE)
@@ -70,7 +70,7 @@ WBSDeliverable:
 				//(workpackages+=WorkPackage*)
 				(wbsNodes+=WBSNode*)
 				('requirements'OPENCURLY
-	 			(requirements+= [rml::REQNode|QualifiedName]ENDLINE)?
+	 			(requirements+= [rml::REQNode|QualifiedName]ENDLINE)*
 	 			CLOSEDCURLY)?
 			CLOSEDCURLY 
 	) | ENDLINE)

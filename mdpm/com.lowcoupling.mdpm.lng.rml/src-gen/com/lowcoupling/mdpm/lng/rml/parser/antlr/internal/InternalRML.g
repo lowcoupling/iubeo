@@ -160,7 +160,7 @@ ruleREQPackage returns [EObject current=null]
 	    }
 
 )
-)?(
+)*(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getREQPackageAccess().getRequirementsREQRequirementParserRuleCall_4_0()); 

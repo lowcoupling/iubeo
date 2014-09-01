@@ -194,9 +194,9 @@ public class PlanGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Project:
 		//	description=ML_COMMENT? "Project" name=ID OPENCURLY ("name" longName=STRING ENDLINE)? (wbs=WBSImport "project"
-		//	wbsProject=[wbs::WBSProject|QualifiedName] ENDLINE)? (resources=ResourcesImport ENDLINE)? (plans+=PlanImport
-		//	ENDLINE)* ("assumptions" OPENCURLY assumptions+=Assumption* CLOSEDCURLY)? ("constraints" OPENCURLY
-		//	constraints+=Constraint* CLOSEDCURLY)? activities+=ActivityElement* CLOSEDCURLY;
+		//	wbsProject=[wbs::WBSProject|QualifiedName] ENDLINE)? (resources=ResourcesImport ENDLINE)? (plans+=PlanImport ENDLINE)*
+		//	("assumptions" OPENCURLY assumptions+=Assumption* CLOSEDCURLY)? ("constraints" OPENCURLY constraints+=Constraint*
+		//	CLOSEDCURLY)? activities+=ActivityElement* CLOSEDCURLY;
 		public ParserRule getRule() { return rule; }
 
 		//description=ML_COMMENT? "Project" name=ID OPENCURLY ("name" longName=STRING ENDLINE)? (wbs=WBSImport "project"
@@ -405,8 +405,8 @@ public class PlanGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cWbsActivityKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Assignment cWbsActivityAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final CrossReference cWbsActivityWBSActivityCrossReference_5_1_0 = (CrossReference)cWbsActivityAssignment_5_1.eContents().get(0);
-		private final RuleCall cWbsActivityWBSActivityQualifiedNameParserRuleCall_5_1_0_1 = (RuleCall)cWbsActivityWBSActivityCrossReference_5_1_0.eContents().get(1);
+		private final CrossReference cWbsActivityWBSNodeCrossReference_5_1_0 = (CrossReference)cWbsActivityAssignment_5_1.eContents().get(0);
+		private final RuleCall cWbsActivityWBSNodeQualifiedNameParserRuleCall_5_1_0_1 = (RuleCall)cWbsActivityWBSNodeCrossReference_5_1_0.eContents().get(1);
 		private final RuleCall cENDLINEParserRuleCall_5_2 = (RuleCall)cGroup_5.eContents().get(2);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cDependsOnKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
@@ -420,13 +420,13 @@ public class PlanGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//ActivityGroup:
 		//	description=ML_COMMENT? "Group" name=ID OPENCURLY ("name" longName=STRING ENDLINE)? ("wbsActivity"
-		//	wbsActivity+=[wbs::WBSActivity|QualifiedName]* ENDLINE)? ("dependsOn" dependencies+=[ActivityElement|QualifiedName]*
+		//	wbsActivity+=[wbs::WBSNode|QualifiedName]* ENDLINE)? ("dependsOn" dependencies+=[ActivityElement|QualifiedName]*
 		//	ENDLINE)? activities+=ActivityElement* //groups += ActivityGroup*
 		//	CLOSEDCURLY;
 		public ParserRule getRule() { return rule; }
 
 		//description=ML_COMMENT? "Group" name=ID OPENCURLY ("name" longName=STRING ENDLINE)? ("wbsActivity"
-		//wbsActivity+=[wbs::WBSActivity|QualifiedName]* ENDLINE)? ("dependsOn" dependencies+=[ActivityElement|QualifiedName]*
+		//wbsActivity+=[wbs::WBSNode|QualifiedName]* ENDLINE)? ("dependsOn" dependencies+=[ActivityElement|QualifiedName]*
 		//ENDLINE)? activities+=ActivityElement* //groups += ActivityGroup*
 		//CLOSEDCURLY
 		public Group getGroup() { return cGroup; }
@@ -464,20 +464,20 @@ public class PlanGrammarAccess extends AbstractGrammarElementFinder {
 		//ENDLINE
 		public RuleCall getENDLINEParserRuleCall_4_2() { return cENDLINEParserRuleCall_4_2; }
 
-		//("wbsActivity" wbsActivity+=[wbs::WBSActivity|QualifiedName]* ENDLINE)?
+		//("wbsActivity" wbsActivity+=[wbs::WBSNode|QualifiedName]* ENDLINE)?
 		public Group getGroup_5() { return cGroup_5; }
 
 		//"wbsActivity"
 		public Keyword getWbsActivityKeyword_5_0() { return cWbsActivityKeyword_5_0; }
 
-		//wbsActivity+=[wbs::WBSActivity|QualifiedName]*
+		//wbsActivity+=[wbs::WBSNode|QualifiedName]*
 		public Assignment getWbsActivityAssignment_5_1() { return cWbsActivityAssignment_5_1; }
 
-		//[wbs::WBSActivity|QualifiedName]
-		public CrossReference getWbsActivityWBSActivityCrossReference_5_1_0() { return cWbsActivityWBSActivityCrossReference_5_1_0; }
+		//[wbs::WBSNode|QualifiedName]
+		public CrossReference getWbsActivityWBSNodeCrossReference_5_1_0() { return cWbsActivityWBSNodeCrossReference_5_1_0; }
 
 		//QualifiedName
-		public RuleCall getWbsActivityWBSActivityQualifiedNameParserRuleCall_5_1_0_1() { return cWbsActivityWBSActivityQualifiedNameParserRuleCall_5_1_0_1; }
+		public RuleCall getWbsActivityWBSNodeQualifiedNameParserRuleCall_5_1_0_1() { return cWbsActivityWBSNodeQualifiedNameParserRuleCall_5_1_0_1; }
 
 		//ENDLINE
 		public RuleCall getENDLINEParserRuleCall_5_2() { return cENDLINEParserRuleCall_5_2; }
@@ -980,8 +980,8 @@ public class PlanGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cWbsActivityKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
 		private final Assignment cWbsActivityAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final CrossReference cWbsActivityWBSActivityCrossReference_6_1_0 = (CrossReference)cWbsActivityAssignment_6_1.eContents().get(0);
-		private final RuleCall cWbsActivityWBSActivityQualifiedNameParserRuleCall_6_1_0_1 = (RuleCall)cWbsActivityWBSActivityCrossReference_6_1_0.eContents().get(1);
+		private final CrossReference cWbsActivityWBSNodeCrossReference_6_1_0 = (CrossReference)cWbsActivityAssignment_6_1.eContents().get(0);
+		private final RuleCall cWbsActivityWBSNodeQualifiedNameParserRuleCall_6_1_0_1 = (RuleCall)cWbsActivityWBSNodeCrossReference_6_1_0.eContents().get(1);
 		private final RuleCall cENDLINEParserRuleCall_6_2 = (RuleCall)cGroup_6.eContents().get(2);
 		private final UnorderedGroup cUnorderedGroup_7 = (UnorderedGroup)cGroup.eContents().get(7);
 		private final Alternatives cAlternatives_7_0 = (Alternatives)cUnorderedGroup_7.eContents().get(0);
@@ -1026,14 +1026,14 @@ public class PlanGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Activity:
 		//	description=ML_COMMENT? "Activity" name=ID OPENCURLY ("name" longName=STRING ENDLINE)? ("involves" OPENCURLY
-		//	involvedResources+=ResourceInvolvement* CLOSEDCURLY)? ("wbsActivity" wbsActivity+=[wbs::WBSActivity|QualifiedName]*
-		//	ENDLINE)? (("starts" start=STRING ENDLINE | "after" after=[ActivityElement|QualifiedName] "offset" offset=INT
-		//	ENDLINE) & ("ends" end=STRING ENDLINE | "duration" duration=INT ENDLINE) "completeness" completeness=INT "%" ENDLINE
-		//	& ("dependsOn" dependencies+=[ActivityElement|QualifiedName]* ENDLINE)?) CLOSEDCURLY;
+		//	involvedResources+=ResourceInvolvement* CLOSEDCURLY)? ("wbsActivity" wbsActivity+=[wbs::WBSNode|QualifiedName]*
+		//	ENDLINE)? (("starts" start=STRING ENDLINE | "after" after=[ActivityElement|QualifiedName] "offset" offset=INT ENDLINE)
+		//	& ("ends" end=STRING ENDLINE | "duration" duration=INT ENDLINE) "completeness" completeness=INT "%" ENDLINE &
+		//	("dependsOn" dependencies+=[ActivityElement|QualifiedName]* ENDLINE)?) CLOSEDCURLY;
 		public ParserRule getRule() { return rule; }
 
 		//description=ML_COMMENT? "Activity" name=ID OPENCURLY ("name" longName=STRING ENDLINE)? ("involves" OPENCURLY
-		//involvedResources+=ResourceInvolvement* CLOSEDCURLY)? ("wbsActivity" wbsActivity+=[wbs::WBSActivity|QualifiedName]*
+		//involvedResources+=ResourceInvolvement* CLOSEDCURLY)? ("wbsActivity" wbsActivity+=[wbs::WBSNode|QualifiedName]*
 		//ENDLINE)? (("starts" start=STRING ENDLINE | "after" after=[ActivityElement|QualifiedName] "offset" offset=INT ENDLINE)
 		//& ("ends" end=STRING ENDLINE | "duration" duration=INT ENDLINE) "completeness" completeness=INT "%" ENDLINE &
 		//("dependsOn" dependencies+=[ActivityElement|QualifiedName]* ENDLINE)?) CLOSEDCURLY
@@ -1090,20 +1090,20 @@ public class PlanGrammarAccess extends AbstractGrammarElementFinder {
 		//CLOSEDCURLY
 		public RuleCall getCLOSEDCURLYTerminalRuleCall_5_3() { return cCLOSEDCURLYTerminalRuleCall_5_3; }
 
-		//("wbsActivity" wbsActivity+=[wbs::WBSActivity|QualifiedName]* ENDLINE)?
+		//("wbsActivity" wbsActivity+=[wbs::WBSNode|QualifiedName]* ENDLINE)?
 		public Group getGroup_6() { return cGroup_6; }
 
 		//"wbsActivity"
 		public Keyword getWbsActivityKeyword_6_0() { return cWbsActivityKeyword_6_0; }
 
-		//wbsActivity+=[wbs::WBSActivity|QualifiedName]*
+		//wbsActivity+=[wbs::WBSNode|QualifiedName]*
 		public Assignment getWbsActivityAssignment_6_1() { return cWbsActivityAssignment_6_1; }
 
-		//[wbs::WBSActivity|QualifiedName]
-		public CrossReference getWbsActivityWBSActivityCrossReference_6_1_0() { return cWbsActivityWBSActivityCrossReference_6_1_0; }
+		//[wbs::WBSNode|QualifiedName]
+		public CrossReference getWbsActivityWBSNodeCrossReference_6_1_0() { return cWbsActivityWBSNodeCrossReference_6_1_0; }
 
 		//QualifiedName
-		public RuleCall getWbsActivityWBSActivityQualifiedNameParserRuleCall_6_1_0_1() { return cWbsActivityWBSActivityQualifiedNameParserRuleCall_6_1_0_1; }
+		public RuleCall getWbsActivityWBSNodeQualifiedNameParserRuleCall_6_1_0_1() { return cWbsActivityWBSNodeQualifiedNameParserRuleCall_6_1_0_1; }
 
 		//ENDLINE
 		public RuleCall getENDLINEParserRuleCall_6_2() { return cENDLINEParserRuleCall_6_2; }
@@ -1379,9 +1379,9 @@ public class PlanGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Project:
 	//	description=ML_COMMENT? "Project" name=ID OPENCURLY ("name" longName=STRING ENDLINE)? (wbs=WBSImport "project"
-	//	wbsProject=[wbs::WBSProject|QualifiedName] ENDLINE)? (resources=ResourcesImport ENDLINE)? (plans+=PlanImport
-	//	ENDLINE)* ("assumptions" OPENCURLY assumptions+=Assumption* CLOSEDCURLY)? ("constraints" OPENCURLY
-	//	constraints+=Constraint* CLOSEDCURLY)? activities+=ActivityElement* CLOSEDCURLY;
+	//	wbsProject=[wbs::WBSProject|QualifiedName] ENDLINE)? (resources=ResourcesImport ENDLINE)? (plans+=PlanImport ENDLINE)*
+	//	("assumptions" OPENCURLY assumptions+=Assumption* CLOSEDCURLY)? ("constraints" OPENCURLY constraints+=Constraint*
+	//	CLOSEDCURLY)? activities+=ActivityElement* CLOSEDCURLY;
 	public ProjectElements getProjectAccess() {
 		return (pProject != null) ? pProject : (pProject = new ProjectElements());
 	}
@@ -1412,7 +1412,7 @@ public class PlanGrammarAccess extends AbstractGrammarElementFinder {
 
 	//ActivityGroup:
 	//	description=ML_COMMENT? "Group" name=ID OPENCURLY ("name" longName=STRING ENDLINE)? ("wbsActivity"
-	//	wbsActivity+=[wbs::WBSActivity|QualifiedName]* ENDLINE)? ("dependsOn" dependencies+=[ActivityElement|QualifiedName]*
+	//	wbsActivity+=[wbs::WBSNode|QualifiedName]* ENDLINE)? ("dependsOn" dependencies+=[ActivityElement|QualifiedName]*
 	//	ENDLINE)? activities+=ActivityElement* //groups += ActivityGroup*
 	//	CLOSEDCURLY;
 	public ActivityGroupElements getActivityGroupAccess() {
@@ -1521,10 +1521,10 @@ public class PlanGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Activity:
 	//	description=ML_COMMENT? "Activity" name=ID OPENCURLY ("name" longName=STRING ENDLINE)? ("involves" OPENCURLY
-	//	involvedResources+=ResourceInvolvement* CLOSEDCURLY)? ("wbsActivity" wbsActivity+=[wbs::WBSActivity|QualifiedName]*
-	//	ENDLINE)? (("starts" start=STRING ENDLINE | "after" after=[ActivityElement|QualifiedName] "offset" offset=INT
-	//	ENDLINE) & ("ends" end=STRING ENDLINE | "duration" duration=INT ENDLINE) "completeness" completeness=INT "%" ENDLINE
-	//	& ("dependsOn" dependencies+=[ActivityElement|QualifiedName]* ENDLINE)?) CLOSEDCURLY;
+	//	involvedResources+=ResourceInvolvement* CLOSEDCURLY)? ("wbsActivity" wbsActivity+=[wbs::WBSNode|QualifiedName]*
+	//	ENDLINE)? (("starts" start=STRING ENDLINE | "after" after=[ActivityElement|QualifiedName] "offset" offset=INT ENDLINE)
+	//	& ("ends" end=STRING ENDLINE | "duration" duration=INT ENDLINE) "completeness" completeness=INT "%" ENDLINE &
+	//	("dependsOn" dependencies+=[ActivityElement|QualifiedName]* ENDLINE)?) CLOSEDCURLY;
 	public ActivityElements getActivityAccess() {
 		return (pActivity != null) ? pActivity : (pActivity = new ActivityElements());
 	}

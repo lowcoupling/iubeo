@@ -7,7 +7,7 @@ Model:
 	
 REQPackage:
 	'package' name=ID '{'
-		(package +=REQPackage*)?
+		(package +=REQPackage)*
 		requirements+=REQRequirement*
 	'}'
 ;

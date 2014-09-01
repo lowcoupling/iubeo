@@ -66,12 +66,12 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//WBSProgram:
 		//	description=ML_COMMENT? "Program " name=ID OPENCURLY (requirementsModel+=RequirementImport ENDLINE)*
-		//	projects+=WBSProject* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+		//	projects+=WBSProject* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 		//	CLOSEDCURLY;
 		public ParserRule getRule() { return rule; }
 
 		//description=ML_COMMENT? "Program " name=ID OPENCURLY (requirementsModel+=RequirementImport ENDLINE)*
-		//projects+=WBSProject* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+		//projects+=WBSProject* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 		//CLOSEDCURLY
 		public Group getGroup() { return cGroup; }
 
@@ -111,7 +111,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		//WBSProject
 		public RuleCall getProjectsWBSProjectParserRuleCall_5_0() { return cProjectsWBSProjectParserRuleCall_5_0; }
 
-		//("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+		//("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 		public Group getGroup_6() { return cGroup_6; }
 
 		//"requirements"
@@ -120,7 +120,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		//OPENCURLY
 		public RuleCall getOPENCURLYTerminalRuleCall_6_1() { return cOPENCURLYTerminalRuleCall_6_1; }
 
-		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)?
+		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)*
 		public Group getGroup_6_2() { return cGroup_6_2; }
 
 		//requirements+=[rml::REQNode|QualifiedName]
@@ -170,12 +170,12 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//WBSProject:
 		//	description=ML_COMMENT? "Project " name=ID OPENCURLY (requirementsModel+=RequirementImport ENDLINE)*
-		//	wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+		//	wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 		//	CLOSEDCURLY;
 		public ParserRule getRule() { return rule; }
 
 		//description=ML_COMMENT? "Project " name=ID OPENCURLY (requirementsModel+=RequirementImport ENDLINE)* wbsNodes+=WBSNode*
-		//("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)? CLOSEDCURLY
+		//("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)? CLOSEDCURLY
 		public Group getGroup() { return cGroup; }
 
 		//description=ML_COMMENT?
@@ -214,7 +214,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		//WBSNode
 		public RuleCall getWbsNodesWBSNodeParserRuleCall_5_0() { return cWbsNodesWBSNodeParserRuleCall_5_0; }
 
-		//("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+		//("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 		public Group getGroup_6() { return cGroup_6; }
 
 		//"requirements"
@@ -223,7 +223,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		//OPENCURLY
 		public RuleCall getOPENCURLYTerminalRuleCall_6_1() { return cOPENCURLYTerminalRuleCall_6_1; }
 
-		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)?
+		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)*
 		public Group getGroup_6_2() { return cGroup_6_2; }
 
 		//requirements+=[rml::REQNode|QualifiedName]
@@ -296,11 +296,11 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//WBSActivity:
 		//	description=ML_COMMENT? "Activity " name=ID (OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY
-		//	(requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)? CLOSEDCURLY | ENDLINE);
+		//	(requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)? CLOSEDCURLY | ENDLINE);
 		public ParserRule getRule() { return rule; }
 
 		//description=ML_COMMENT? "Activity " name=ID (OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY
-		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)? CLOSEDCURLY | ENDLINE)
+		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)? CLOSEDCURLY | ENDLINE)
 		public Group getGroup() { return cGroup; }
 
 		//description=ML_COMMENT?
@@ -318,11 +318,11 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)?
+		//OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)*
 		//CLOSEDCURLY)? CLOSEDCURLY | ENDLINE
 		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
-		//OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)?
+		//OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)*
 		//CLOSEDCURLY)? CLOSEDCURLY
 		public Group getGroup_3_0() { return cGroup_3_0; }
 
@@ -335,7 +335,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		//WBSNode
 		public RuleCall getWbsNodesWBSNodeParserRuleCall_3_0_1_0() { return cWbsNodesWBSNodeParserRuleCall_3_0_1_0; }
 
-		//("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+		//("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 		public Group getGroup_3_0_2() { return cGroup_3_0_2; }
 
 		//"requirements"
@@ -344,7 +344,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		//OPENCURLY
 		public RuleCall getOPENCURLYTerminalRuleCall_3_0_2_1() { return cOPENCURLYTerminalRuleCall_3_0_2_1; }
 
-		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)?
+		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)*
 		public Group getGroup_3_0_2_2() { return cGroup_3_0_2_2; }
 
 		//requirements+=[rml::REQNode|QualifiedName]
@@ -396,11 +396,11 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//WBSWorkPackage:
 		//	description=ML_COMMENT? "WorkPackage " name=ID (OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY
-		//	(requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)? CLOSEDCURLY | ENDLINE);
+		//	(requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)? CLOSEDCURLY | ENDLINE);
 		public ParserRule getRule() { return rule; }
 
 		//description=ML_COMMENT? "WorkPackage " name=ID (OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY
-		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)? CLOSEDCURLY | ENDLINE)
+		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)? CLOSEDCURLY | ENDLINE)
 		public Group getGroup() { return cGroup; }
 
 		//description=ML_COMMENT?
@@ -418,11 +418,11 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
-		//OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)?
+		//OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)*
 		//CLOSEDCURLY)? CLOSEDCURLY | ENDLINE
 		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
-		//OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)?
+		//OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)*
 		//CLOSEDCURLY)? CLOSEDCURLY
 		public Group getGroup_3_0() { return cGroup_3_0; }
 
@@ -435,7 +435,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		//WBSNode
 		public RuleCall getWbsNodesWBSNodeParserRuleCall_3_0_1_0() { return cWbsNodesWBSNodeParserRuleCall_3_0_1_0; }
 
-		//("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+		//("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 		public Group getGroup_3_0_2() { return cGroup_3_0_2; }
 
 		//"requirements"
@@ -444,7 +444,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		//OPENCURLY
 		public RuleCall getOPENCURLYTerminalRuleCall_3_0_2_1() { return cOPENCURLYTerminalRuleCall_3_0_2_1; }
 
-		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)?
+		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)*
 		public Group getGroup_3_0_2_2() { return cGroup_3_0_2_2; }
 
 		//requirements+=[rml::REQNode|QualifiedName]
@@ -496,12 +496,12 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//WBSDeliverable:
 		//	description=ML_COMMENT? "Deliverable " name=ID (OPENCURLY //(workpackages+=WorkPackage*)
-		//	wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+		//	wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 		//	CLOSEDCURLY | ENDLINE);
 		public ParserRule getRule() { return rule; }
 
 		//description=ML_COMMENT? "Deliverable " name=ID (OPENCURLY //(workpackages+=WorkPackage*)
-		//wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+		//wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 		//CLOSEDCURLY | ENDLINE)
 		public Group getGroup() { return cGroup; }
 
@@ -521,12 +521,12 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
 
 		//OPENCURLY //(workpackages+=WorkPackage*)
-		//wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+		//wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 		//CLOSEDCURLY | ENDLINE
 		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
 		//OPENCURLY //(workpackages+=WorkPackage*)
-		//wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+		//wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 		//CLOSEDCURLY
 		public Group getGroup_3_0() { return cGroup_3_0; }
 
@@ -539,7 +539,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		//WBSNode
 		public RuleCall getWbsNodesWBSNodeParserRuleCall_3_0_1_0() { return cWbsNodesWBSNodeParserRuleCall_3_0_1_0; }
 
-		//("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+		//("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 		public Group getGroup_3_0_2() { return cGroup_3_0_2; }
 
 		//"requirements"
@@ -548,7 +548,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 		//OPENCURLY
 		public RuleCall getOPENCURLYTerminalRuleCall_3_0_2_1() { return cOPENCURLYTerminalRuleCall_3_0_2_1; }
 
-		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)?
+		//(requirements+=[rml::REQNode|QualifiedName] ENDLINE)*
 		public Group getGroup_3_0_2_2() { return cGroup_3_0_2_2; }
 
 		//requirements+=[rml::REQNode|QualifiedName]
@@ -693,7 +693,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 
 	//WBSProgram:
 	//	description=ML_COMMENT? "Program " name=ID OPENCURLY (requirementsModel+=RequirementImport ENDLINE)*
-	//	projects+=WBSProject* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+	//	projects+=WBSProject* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 	//	CLOSEDCURLY;
 	public WBSProgramElements getWBSProgramAccess() {
 		return (pWBSProgram != null) ? pWBSProgram : (pWBSProgram = new WBSProgramElements());
@@ -705,7 +705,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 
 	//WBSProject:
 	//	description=ML_COMMENT? "Project " name=ID OPENCURLY (requirementsModel+=RequirementImport ENDLINE)*
-	//	wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+	//	wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 	//	CLOSEDCURLY;
 	public WBSProjectElements getWBSProjectAccess() {
 		return (pWBSProject != null) ? pWBSProject : (pWBSProject = new WBSProjectElements());
@@ -727,7 +727,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 
 	//WBSActivity:
 	//	description=ML_COMMENT? "Activity " name=ID (OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY
-	//	(requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)? CLOSEDCURLY | ENDLINE);
+	//	(requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)? CLOSEDCURLY | ENDLINE);
 	public WBSActivityElements getWBSActivityAccess() {
 		return (pWBSActivity != null) ? pWBSActivity : (pWBSActivity = new WBSActivityElements());
 	}
@@ -738,7 +738,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 
 	//WBSWorkPackage:
 	//	description=ML_COMMENT? "WorkPackage " name=ID (OPENCURLY wbsNodes+=WBSNode* ("requirements" OPENCURLY
-	//	(requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)? CLOSEDCURLY | ENDLINE);
+	//	(requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)? CLOSEDCURLY | ENDLINE);
 	public WBSWorkPackageElements getWBSWorkPackageAccess() {
 		return (pWBSWorkPackage != null) ? pWBSWorkPackage : (pWBSWorkPackage = new WBSWorkPackageElements());
 	}
@@ -749,7 +749,7 @@ public class WBSGrammarAccess extends AbstractGrammarElementFinder {
 
 	//WBSDeliverable:
 	//	description=ML_COMMENT? "Deliverable " name=ID (OPENCURLY //(workpackages+=WorkPackage*)
-	//	wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)? CLOSEDCURLY)?
+	//	wbsNodes+=WBSNode* ("requirements" OPENCURLY (requirements+=[rml::REQNode|QualifiedName] ENDLINE)* CLOSEDCURLY)?
 	//	CLOSEDCURLY | ENDLINE);
 	public WBSDeliverableElements getWBSDeliverableAccess() {
 		return (pWBSDeliverable != null) ? pWBSDeliverable : (pWBSDeliverable = new WBSDeliverableElements());

@@ -34,7 +34,7 @@ public class MDPMNewWizardPage extends WizardPage {
 	 */
 	public MDPMNewWizardPage(ISelection selection) {
 		super("wizardPage");
-		setTitle("Iubeo Project Wizard");
+		setTitle("MDPM Project Wizard");
 		//setDescription("This wizard creates a new file with *.elt extension that can be opened by a multi-page editor.");
 		this.selection = selection;
 	}

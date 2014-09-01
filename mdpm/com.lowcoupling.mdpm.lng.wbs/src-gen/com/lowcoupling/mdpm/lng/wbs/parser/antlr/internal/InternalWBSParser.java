@@ -23,25 +23,25 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
         "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ML_COMMENT", "RULE_ID", "RULE_OPENCURLY", "RULE_ENDLINE", "RULE_CLOSEDCURLY", "RULE_STRING", "RULE_INT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Program '", "'requirements'", "'Project '", "'Activity '", "'WorkPackage '", "'Deliverable '", "'.'", "'req_import'"
     };
-    public static final int RULE_ENDLINE=7;
-    public static final int RULE_OPENCURLY=6;
-    public static final int RULE_STRING=9;
-    public static final int RULE_SL_COMMENT=11;
-    public static final int T__19=19;
-    public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
-    public static final int T__14=14;
-    public static final int EOF=-1;
-    public static final int RULE_CLOSEDCURLY=8;
     public static final int RULE_ID=5;
-    public static final int RULE_WS=12;
     public static final int RULE_ANY_OTHER=13;
-    public static final int RULE_INT=10;
-    public static final int RULE_ML_COMMENT=4;
-    public static final int T__20=20;
     public static final int T__21=21;
+    public static final int T__20=20;
+    public static final int RULE_SL_COMMENT=11;
+    public static final int EOF=-1;
+    public static final int RULE_ENDLINE=7;
+    public static final int RULE_ML_COMMENT=4;
+    public static final int T__19=19;
+    public static final int RULE_STRING=9;
+    public static final int T__16=16;
+    public static final int T__15=15;
+    public static final int T__18=18;
+    public static final int T__17=17;
+    public static final int RULE_CLOSEDCURLY=8;
+    public static final int T__14=14;
+    public static final int RULE_OPENCURLY=6;
+    public static final int RULE_INT=10;
+    public static final int RULE_WS=12;
 
     // delegates
     // delegators
@@ -140,11 +140,11 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                 {
                 int LA1_1 = input.LA(2);
 
-                if ( (LA1_1==16) ) {
-                    alt1=2;
-                }
-                else if ( (LA1_1==14) ) {
+                if ( (LA1_1==14) ) {
                     alt1=1;
+                }
+                else if ( (LA1_1==16) ) {
+                    alt1=2;
                 }
                 else {
                     NoViableAltException nvae =
@@ -265,7 +265,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWBSProgram"
-    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:116:1: ruleWBSProgram returns [EObject current=null] : ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Program ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_projects_6_0= ruleWBSProject ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY ) ;
+    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:116:1: ruleWBSProgram returns [EObject current=null] : ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Program ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_projects_6_0= ruleWBSProject ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY ) ;
     public final EObject ruleWBSProgram() throws RecognitionException {
         EObject current = null;
 
@@ -287,11 +287,11 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:119:28: ( ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Program ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_projects_6_0= ruleWBSProject ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY ) )
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:120:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Program ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_projects_6_0= ruleWBSProject ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:119:28: ( ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Program ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_projects_6_0= ruleWBSProject ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY ) )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:120:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Program ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_projects_6_0= ruleWBSProject ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY )
             {
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:120:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Program ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_projects_6_0= ruleWBSProject ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY )
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:120:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Program ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_projects_6_0= ruleWBSProject ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:120:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Program ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_projects_6_0= ruleWBSProject ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:120:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Program ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_projects_6_0= ruleWBSProject ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY
             {
             // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:120:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )?
             int alt2=2;
@@ -472,7 +472,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:204:3: (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )?
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:204:3: (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -481,7 +481,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
             }
             switch (alt6) {
                 case 1 :
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:204:5: otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:204:5: otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY
                     {
                     otherlv_7=(Token)match(input,15,FOLLOW_15_in_ruleWBSProgram365); 
 
@@ -491,54 +491,61 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                      
                         newLeafNode(this_OPENCURLY_8, grammarAccess.getWBSProgramAccess().getOPENCURLYTerminalRuleCall_6_1()); 
                         
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:212:1: ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )?
-                    int alt5=2;
-                    int LA5_0 = input.LA(1);
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:212:1: ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )*
+                    loop5:
+                    do {
+                        int alt5=2;
+                        int LA5_0 = input.LA(1);
 
-                    if ( (LA5_0==RULE_ID) ) {
-                        alt5=1;
-                    }
-                    switch (alt5) {
-                        case 1 :
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:212:2: ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE
-                            {
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:212:2: ( ( ruleQualifiedName ) )
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:213:1: ( ruleQualifiedName )
-                            {
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:213:1: ( ruleQualifiedName )
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:214:3: ruleQualifiedName
-                            {
-
-                            			if (current==null) {
-                            	            current = createModelElement(grammarAccess.getWBSProgramRule());
-                            	        }
-                                    
-                             
-                            	        newCompositeNode(grammarAccess.getWBSProgramAccess().getRequirementsREQNodeCrossReference_6_2_0_0()); 
-                            	    
-                            pushFollow(FOLLOW_ruleQualifiedName_in_ruleWBSProgram399);
-                            ruleQualifiedName();
-
-                            state._fsp--;
-
-                             
-                            	        afterParserOrEnumRuleCall();
-                            	    
-
-                            }
+                        if ( (LA5_0==RULE_ID) ) {
+                            alt5=1;
+                        }
 
 
-                            }
+                        switch (alt5) {
+                    	case 1 :
+                    	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:212:2: ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE
+                    	    {
+                    	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:212:2: ( ( ruleQualifiedName ) )
+                    	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:213:1: ( ruleQualifiedName )
+                    	    {
+                    	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:213:1: ( ruleQualifiedName )
+                    	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:214:3: ruleQualifiedName
+                    	    {
 
-                            this_ENDLINE_10=(Token)match(input,RULE_ENDLINE,FOLLOW_RULE_ENDLINE_in_ruleWBSProgram410); 
-                             
-                                newLeafNode(this_ENDLINE_10, grammarAccess.getWBSProgramAccess().getENDLINETerminalRuleCall_6_2_1()); 
-                                
+                    	    			if (current==null) {
+                    	    	            current = createModelElement(grammarAccess.getWBSProgramRule());
+                    	    	        }
+                    	            
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getWBSProgramAccess().getRequirementsREQNodeCrossReference_6_2_0_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleWBSProgram399);
+                    	    ruleQualifiedName();
 
-                            }
-                            break;
+                    	    state._fsp--;
 
-                    }
+                    	     
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
+
+                    	    }
+
+
+                    	    }
+
+                    	    this_ENDLINE_10=(Token)match(input,RULE_ENDLINE,FOLLOW_RULE_ENDLINE_in_ruleWBSProgram410); 
+                    	     
+                    	        newLeafNode(this_ENDLINE_10, grammarAccess.getWBSProgramAccess().getENDLINETerminalRuleCall_6_2_1()); 
+                    	        
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop5;
+                        }
+                    } while (true);
 
                     this_CLOSEDCURLY_11=(Token)match(input,RULE_CLOSEDCURLY,FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSProgram422); 
                      
@@ -611,7 +618,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWBSProject"
-    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:256:1: ruleWBSProject returns [EObject current=null] : ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Project ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_wbsNodes_6_0= ruleWBSNode ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY ) ;
+    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:256:1: ruleWBSProject returns [EObject current=null] : ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Project ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_wbsNodes_6_0= ruleWBSNode ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY ) ;
     public final EObject ruleWBSProject() throws RecognitionException {
         EObject current = null;
 
@@ -633,11 +640,11 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:259:28: ( ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Project ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_wbsNodes_6_0= ruleWBSNode ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY ) )
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:260:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Project ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_wbsNodes_6_0= ruleWBSNode ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:259:28: ( ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Project ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_wbsNodes_6_0= ruleWBSNode ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY ) )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:260:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Project ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_wbsNodes_6_0= ruleWBSNode ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY )
             {
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:260:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Project ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_wbsNodes_6_0= ruleWBSNode ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY )
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:260:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Project ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_wbsNodes_6_0= ruleWBSNode ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:260:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Project ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_wbsNodes_6_0= ruleWBSNode ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:260:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Project ' ( (lv_name_2_0= RULE_ID ) ) this_OPENCURLY_3= RULE_OPENCURLY ( ( (lv_requirementsModel_4_0= ruleRequirementImport ) ) this_ENDLINE_5= RULE_ENDLINE )* ( (lv_wbsNodes_6_0= ruleWBSNode ) )* (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_12= RULE_CLOSEDCURLY
             {
             // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:260:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )?
             int alt7=2;
@@ -818,7 +825,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:344:3: (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )?
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:344:3: (otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -827,7 +834,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
             }
             switch (alt11) {
                 case 1 :
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:344:5: otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )? this_CLOSEDCURLY_11= RULE_CLOSEDCURLY
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:344:5: otherlv_7= 'requirements' this_OPENCURLY_8= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )* this_CLOSEDCURLY_11= RULE_CLOSEDCURLY
                     {
                     otherlv_7=(Token)match(input,15,FOLLOW_15_in_ruleWBSProject640); 
 
@@ -837,54 +844,61 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                      
                         newLeafNode(this_OPENCURLY_8, grammarAccess.getWBSProjectAccess().getOPENCURLYTerminalRuleCall_6_1()); 
                         
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:352:1: ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )?
-                    int alt10=2;
-                    int LA10_0 = input.LA(1);
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:352:1: ( ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE )*
+                    loop10:
+                    do {
+                        int alt10=2;
+                        int LA10_0 = input.LA(1);
 
-                    if ( (LA10_0==RULE_ID) ) {
-                        alt10=1;
-                    }
-                    switch (alt10) {
-                        case 1 :
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:352:2: ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE
-                            {
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:352:2: ( ( ruleQualifiedName ) )
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:353:1: ( ruleQualifiedName )
-                            {
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:353:1: ( ruleQualifiedName )
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:354:3: ruleQualifiedName
-                            {
-
-                            			if (current==null) {
-                            	            current = createModelElement(grammarAccess.getWBSProjectRule());
-                            	        }
-                                    
-                             
-                            	        newCompositeNode(grammarAccess.getWBSProjectAccess().getRequirementsREQNodeCrossReference_6_2_0_0()); 
-                            	    
-                            pushFollow(FOLLOW_ruleQualifiedName_in_ruleWBSProject674);
-                            ruleQualifiedName();
-
-                            state._fsp--;
-
-                             
-                            	        afterParserOrEnumRuleCall();
-                            	    
-
-                            }
+                        if ( (LA10_0==RULE_ID) ) {
+                            alt10=1;
+                        }
 
 
-                            }
+                        switch (alt10) {
+                    	case 1 :
+                    	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:352:2: ( ( ruleQualifiedName ) ) this_ENDLINE_10= RULE_ENDLINE
+                    	    {
+                    	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:352:2: ( ( ruleQualifiedName ) )
+                    	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:353:1: ( ruleQualifiedName )
+                    	    {
+                    	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:353:1: ( ruleQualifiedName )
+                    	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:354:3: ruleQualifiedName
+                    	    {
 
-                            this_ENDLINE_10=(Token)match(input,RULE_ENDLINE,FOLLOW_RULE_ENDLINE_in_ruleWBSProject685); 
-                             
-                                newLeafNode(this_ENDLINE_10, grammarAccess.getWBSProjectAccess().getENDLINETerminalRuleCall_6_2_1()); 
-                                
+                    	    			if (current==null) {
+                    	    	            current = createModelElement(grammarAccess.getWBSProjectRule());
+                    	    	        }
+                    	            
+                    	     
+                    	    	        newCompositeNode(grammarAccess.getWBSProjectAccess().getRequirementsREQNodeCrossReference_6_2_0_0()); 
+                    	    	    
+                    	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleWBSProject674);
+                    	    ruleQualifiedName();
 
-                            }
-                            break;
+                    	    state._fsp--;
 
-                    }
+                    	     
+                    	    	        afterParserOrEnumRuleCall();
+                    	    	    
+
+                    	    }
+
+
+                    	    }
+
+                    	    this_ENDLINE_10=(Token)match(input,RULE_ENDLINE,FOLLOW_RULE_ENDLINE_in_ruleWBSProject685); 
+                    	     
+                    	        newLeafNode(this_ENDLINE_10, grammarAccess.getWBSProjectAccess().getENDLINETerminalRuleCall_6_2_1()); 
+                    	        
+
+                    	    }
+                    	    break;
+
+                    	default :
+                    	    break loop10;
+                        }
+                    } while (true);
 
                     this_CLOSEDCURLY_11=(Token)match(input,RULE_CLOSEDCURLY,FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSProject697); 
                      
@@ -980,9 +994,9 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
             case RULE_ML_COMMENT:
                 {
                 switch ( input.LA(2) ) {
-                case 18:
+                case 17:
                     {
-                    alt12=2;
+                    alt12=1;
                     }
                     break;
                 case 19:
@@ -990,9 +1004,9 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                     alt12=3;
                     }
                     break;
-                case 17:
+                case 18:
                     {
-                    alt12=1;
+                    alt12=2;
                     }
                     break;
                 default:
@@ -1138,7 +1152,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWBSActivity"
-    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:446:1: ruleWBSActivity returns [EObject current=null] : ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Activity ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) ) ;
+    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:446:1: ruleWBSActivity returns [EObject current=null] : ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Activity ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) ) ;
     public final EObject ruleWBSActivity() throws RecognitionException {
         EObject current = null;
 
@@ -1158,11 +1172,11 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:449:28: ( ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Activity ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) ) )
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:450:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Activity ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:449:28: ( ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Activity ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) ) )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:450:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Activity ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) )
             {
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:450:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Activity ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) )
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:450:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Activity ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:450:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Activity ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:450:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Activity ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE )
             {
             // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:450:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )?
             int alt13=2;
@@ -1231,7 +1245,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:490:2: ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:490:2: ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
@@ -1249,10 +1263,10 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
             }
             switch (alt17) {
                 case 1 :
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:490:3: (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY )
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:490:3: (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY )
                     {
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:490:3: (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY )
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:490:4: this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:490:3: (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY )
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:490:4: this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY
                     {
                     this_OPENCURLY_3=(Token)match(input,RULE_OPENCURLY,FOLLOW_RULE_OPENCURLY_in_ruleWBSActivity995); 
                      
@@ -1307,7 +1321,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:512:3: (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )?
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:512:3: (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )?
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
@@ -1316,7 +1330,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt16) {
                         case 1 :
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:512:5: otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY
+                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:512:5: otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY
                             {
                             otherlv_5=(Token)match(input,15,FOLLOW_15_in_ruleWBSActivity1029); 
 
@@ -1326,54 +1340,61 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                              
                                 newLeafNode(this_OPENCURLY_6, grammarAccess.getWBSActivityAccess().getOPENCURLYTerminalRuleCall_3_0_2_1()); 
                                 
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:520:1: ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )?
-                            int alt15=2;
-                            int LA15_0 = input.LA(1);
+                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:520:1: ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )*
+                            loop15:
+                            do {
+                                int alt15=2;
+                                int LA15_0 = input.LA(1);
 
-                            if ( (LA15_0==RULE_ID) ) {
-                                alt15=1;
-                            }
-                            switch (alt15) {
-                                case 1 :
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:520:2: ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE
-                                    {
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:520:2: ( ( ruleQualifiedName ) )
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:521:1: ( ruleQualifiedName )
-                                    {
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:521:1: ( ruleQualifiedName )
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:522:3: ruleQualifiedName
-                                    {
-
-                                    			if (current==null) {
-                                    	            current = createModelElement(grammarAccess.getWBSActivityRule());
-                                    	        }
-                                            
-                                     
-                                    	        newCompositeNode(grammarAccess.getWBSActivityAccess().getRequirementsREQNodeCrossReference_3_0_2_2_0_0()); 
-                                    	    
-                                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleWBSActivity1063);
-                                    ruleQualifiedName();
-
-                                    state._fsp--;
-
-                                     
-                                    	        afterParserOrEnumRuleCall();
-                                    	    
-
-                                    }
+                                if ( (LA15_0==RULE_ID) ) {
+                                    alt15=1;
+                                }
 
 
-                                    }
+                                switch (alt15) {
+                            	case 1 :
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:520:2: ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE
+                            	    {
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:520:2: ( ( ruleQualifiedName ) )
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:521:1: ( ruleQualifiedName )
+                            	    {
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:521:1: ( ruleQualifiedName )
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:522:3: ruleQualifiedName
+                            	    {
 
-                                    this_ENDLINE_8=(Token)match(input,RULE_ENDLINE,FOLLOW_RULE_ENDLINE_in_ruleWBSActivity1074); 
-                                     
-                                        newLeafNode(this_ENDLINE_8, grammarAccess.getWBSActivityAccess().getENDLINETerminalRuleCall_3_0_2_2_1()); 
-                                        
+                            	    			if (current==null) {
+                            	    	            current = createModelElement(grammarAccess.getWBSActivityRule());
+                            	    	        }
+                            	            
+                            	     
+                            	    	        newCompositeNode(grammarAccess.getWBSActivityAccess().getRequirementsREQNodeCrossReference_3_0_2_2_0_0()); 
+                            	    	    
+                            	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleWBSActivity1063);
+                            	    ruleQualifiedName();
 
-                                    }
-                                    break;
+                            	    state._fsp--;
 
-                            }
+                            	     
+                            	    	        afterParserOrEnumRuleCall();
+                            	    	    
+
+                            	    }
+
+
+                            	    }
+
+                            	    this_ENDLINE_8=(Token)match(input,RULE_ENDLINE,FOLLOW_RULE_ENDLINE_in_ruleWBSActivity1074); 
+                            	     
+                            	        newLeafNode(this_ENDLINE_8, grammarAccess.getWBSActivityAccess().getENDLINETerminalRuleCall_3_0_2_2_1()); 
+                            	        
+
+                            	    }
+                            	    break;
+
+                            	default :
+                            	    break loop15;
+                                }
+                            } while (true);
 
                             this_CLOSEDCURLY_9=(Token)match(input,RULE_CLOSEDCURLY,FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSActivity1086); 
                              
@@ -1465,7 +1486,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWBSWorkPackage"
-    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:569:1: ruleWBSWorkPackage returns [EObject current=null] : ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'WorkPackage ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) ) ;
+    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:569:1: ruleWBSWorkPackage returns [EObject current=null] : ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'WorkPackage ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) ) ;
     public final EObject ruleWBSWorkPackage() throws RecognitionException {
         EObject current = null;
 
@@ -1485,11 +1506,11 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:572:28: ( ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'WorkPackage ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) ) )
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:573:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'WorkPackage ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:572:28: ( ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'WorkPackage ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) ) )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:573:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'WorkPackage ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) )
             {
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:573:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'WorkPackage ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) )
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:573:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'WorkPackage ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:573:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'WorkPackage ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:573:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'WorkPackage ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE )
             {
             // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:573:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )?
             int alt18=2;
@@ -1558,7 +1579,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:613:2: ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:613:2: ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE )
             int alt22=2;
             int LA22_0 = input.LA(1);
 
@@ -1576,10 +1597,10 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
             }
             switch (alt22) {
                 case 1 :
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:613:3: (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY )
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:613:3: (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY )
                     {
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:613:3: (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY )
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:613:4: this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:613:3: (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY )
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:613:4: this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY
                     {
                     this_OPENCURLY_3=(Token)match(input,RULE_OPENCURLY,FOLLOW_RULE_OPENCURLY_in_ruleWBSWorkPackage1256); 
                      
@@ -1634,7 +1655,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:635:3: (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )?
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:635:3: (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )?
                     int alt21=2;
                     int LA21_0 = input.LA(1);
 
@@ -1643,7 +1664,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt21) {
                         case 1 :
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:635:5: otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY
+                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:635:5: otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY
                             {
                             otherlv_5=(Token)match(input,15,FOLLOW_15_in_ruleWBSWorkPackage1290); 
 
@@ -1653,54 +1674,61 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                              
                                 newLeafNode(this_OPENCURLY_6, grammarAccess.getWBSWorkPackageAccess().getOPENCURLYTerminalRuleCall_3_0_2_1()); 
                                 
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:643:1: ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )?
-                            int alt20=2;
-                            int LA20_0 = input.LA(1);
+                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:643:1: ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )*
+                            loop20:
+                            do {
+                                int alt20=2;
+                                int LA20_0 = input.LA(1);
 
-                            if ( (LA20_0==RULE_ID) ) {
-                                alt20=1;
-                            }
-                            switch (alt20) {
-                                case 1 :
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:643:2: ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE
-                                    {
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:643:2: ( ( ruleQualifiedName ) )
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:644:1: ( ruleQualifiedName )
-                                    {
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:644:1: ( ruleQualifiedName )
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:645:3: ruleQualifiedName
-                                    {
-
-                                    			if (current==null) {
-                                    	            current = createModelElement(grammarAccess.getWBSWorkPackageRule());
-                                    	        }
-                                            
-                                     
-                                    	        newCompositeNode(grammarAccess.getWBSWorkPackageAccess().getRequirementsREQNodeCrossReference_3_0_2_2_0_0()); 
-                                    	    
-                                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleWBSWorkPackage1324);
-                                    ruleQualifiedName();
-
-                                    state._fsp--;
-
-                                     
-                                    	        afterParserOrEnumRuleCall();
-                                    	    
-
-                                    }
+                                if ( (LA20_0==RULE_ID) ) {
+                                    alt20=1;
+                                }
 
 
-                                    }
+                                switch (alt20) {
+                            	case 1 :
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:643:2: ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE
+                            	    {
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:643:2: ( ( ruleQualifiedName ) )
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:644:1: ( ruleQualifiedName )
+                            	    {
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:644:1: ( ruleQualifiedName )
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:645:3: ruleQualifiedName
+                            	    {
 
-                                    this_ENDLINE_8=(Token)match(input,RULE_ENDLINE,FOLLOW_RULE_ENDLINE_in_ruleWBSWorkPackage1335); 
-                                     
-                                        newLeafNode(this_ENDLINE_8, grammarAccess.getWBSWorkPackageAccess().getENDLINETerminalRuleCall_3_0_2_2_1()); 
-                                        
+                            	    			if (current==null) {
+                            	    	            current = createModelElement(grammarAccess.getWBSWorkPackageRule());
+                            	    	        }
+                            	            
+                            	     
+                            	    	        newCompositeNode(grammarAccess.getWBSWorkPackageAccess().getRequirementsREQNodeCrossReference_3_0_2_2_0_0()); 
+                            	    	    
+                            	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleWBSWorkPackage1324);
+                            	    ruleQualifiedName();
 
-                                    }
-                                    break;
+                            	    state._fsp--;
 
-                            }
+                            	     
+                            	    	        afterParserOrEnumRuleCall();
+                            	    	    
+
+                            	    }
+
+
+                            	    }
+
+                            	    this_ENDLINE_8=(Token)match(input,RULE_ENDLINE,FOLLOW_RULE_ENDLINE_in_ruleWBSWorkPackage1335); 
+                            	     
+                            	        newLeafNode(this_ENDLINE_8, grammarAccess.getWBSWorkPackageAccess().getENDLINETerminalRuleCall_3_0_2_2_1()); 
+                            	        
+
+                            	    }
+                            	    break;
+
+                            	default :
+                            	    break loop20;
+                                }
+                            } while (true);
 
                             this_CLOSEDCURLY_9=(Token)match(input,RULE_CLOSEDCURLY,FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSWorkPackage1347); 
                              
@@ -1792,7 +1820,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWBSDeliverable"
-    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:692:1: ruleWBSDeliverable returns [EObject current=null] : ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Deliverable ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) ) ;
+    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:692:1: ruleWBSDeliverable returns [EObject current=null] : ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Deliverable ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) ) ;
     public final EObject ruleWBSDeliverable() throws RecognitionException {
         EObject current = null;
 
@@ -1812,11 +1840,11 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:695:28: ( ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Deliverable ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) ) )
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:696:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Deliverable ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:695:28: ( ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Deliverable ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) ) )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:696:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Deliverable ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) )
             {
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:696:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Deliverable ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) )
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:696:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Deliverable ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:696:1: ( ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Deliverable ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE ) )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:696:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )? otherlv_1= 'Deliverable ' ( (lv_name_2_0= RULE_ID ) ) ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE )
             {
             // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:696:2: ( (lv_description_0_0= RULE_ML_COMMENT ) )?
             int alt23=2;
@@ -1885,7 +1913,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:736:2: ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE )
+            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:736:2: ( (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY ) | this_ENDLINE_11= RULE_ENDLINE )
             int alt27=2;
             int LA27_0 = input.LA(1);
 
@@ -1903,10 +1931,10 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
             }
             switch (alt27) {
                 case 1 :
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:736:3: (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY )
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:736:3: (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY )
                     {
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:736:3: (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY )
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:736:4: this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:736:3: (this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY )
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:736:4: this_OPENCURLY_3= RULE_OPENCURLY ( (lv_wbsNodes_4_0= ruleWBSNode ) )* (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )? this_CLOSEDCURLY_10= RULE_CLOSEDCURLY
                     {
                     this_OPENCURLY_3=(Token)match(input,RULE_OPENCURLY,FOLLOW_RULE_OPENCURLY_in_ruleWBSDeliverable1517); 
                      
@@ -1961,7 +1989,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:758:3: (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )?
+                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:758:3: (otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY )?
                     int alt26=2;
                     int LA26_0 = input.LA(1);
 
@@ -1970,7 +1998,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt26) {
                         case 1 :
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:758:5: otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )? this_CLOSEDCURLY_9= RULE_CLOSEDCURLY
+                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:758:5: otherlv_5= 'requirements' this_OPENCURLY_6= RULE_OPENCURLY ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )* this_CLOSEDCURLY_9= RULE_CLOSEDCURLY
                             {
                             otherlv_5=(Token)match(input,15,FOLLOW_15_in_ruleWBSDeliverable1551); 
 
@@ -1980,54 +2008,61 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
                              
                                 newLeafNode(this_OPENCURLY_6, grammarAccess.getWBSDeliverableAccess().getOPENCURLYTerminalRuleCall_3_0_2_1()); 
                                 
-                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:766:1: ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )?
-                            int alt25=2;
-                            int LA25_0 = input.LA(1);
+                            // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:766:1: ( ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE )*
+                            loop25:
+                            do {
+                                int alt25=2;
+                                int LA25_0 = input.LA(1);
 
-                            if ( (LA25_0==RULE_ID) ) {
-                                alt25=1;
-                            }
-                            switch (alt25) {
-                                case 1 :
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:766:2: ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE
-                                    {
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:766:2: ( ( ruleQualifiedName ) )
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:767:1: ( ruleQualifiedName )
-                                    {
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:767:1: ( ruleQualifiedName )
-                                    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:768:3: ruleQualifiedName
-                                    {
-
-                                    			if (current==null) {
-                                    	            current = createModelElement(grammarAccess.getWBSDeliverableRule());
-                                    	        }
-                                            
-                                     
-                                    	        newCompositeNode(grammarAccess.getWBSDeliverableAccess().getRequirementsREQNodeCrossReference_3_0_2_2_0_0()); 
-                                    	    
-                                    pushFollow(FOLLOW_ruleQualifiedName_in_ruleWBSDeliverable1585);
-                                    ruleQualifiedName();
-
-                                    state._fsp--;
-
-                                     
-                                    	        afterParserOrEnumRuleCall();
-                                    	    
-
-                                    }
+                                if ( (LA25_0==RULE_ID) ) {
+                                    alt25=1;
+                                }
 
 
-                                    }
+                                switch (alt25) {
+                            	case 1 :
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:766:2: ( ( ruleQualifiedName ) ) this_ENDLINE_8= RULE_ENDLINE
+                            	    {
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:766:2: ( ( ruleQualifiedName ) )
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:767:1: ( ruleQualifiedName )
+                            	    {
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:767:1: ( ruleQualifiedName )
+                            	    // ../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/parser/antlr/internal/InternalWBS.g:768:3: ruleQualifiedName
+                            	    {
 
-                                    this_ENDLINE_8=(Token)match(input,RULE_ENDLINE,FOLLOW_RULE_ENDLINE_in_ruleWBSDeliverable1596); 
-                                     
-                                        newLeafNode(this_ENDLINE_8, grammarAccess.getWBSDeliverableAccess().getENDLINETerminalRuleCall_3_0_2_2_1()); 
-                                        
+                            	    			if (current==null) {
+                            	    	            current = createModelElement(grammarAccess.getWBSDeliverableRule());
+                            	    	        }
+                            	            
+                            	     
+                            	    	        newCompositeNode(grammarAccess.getWBSDeliverableAccess().getRequirementsREQNodeCrossReference_3_0_2_2_0_0()); 
+                            	    	    
+                            	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleWBSDeliverable1585);
+                            	    ruleQualifiedName();
 
-                                    }
-                                    break;
+                            	    state._fsp--;
 
-                            }
+                            	     
+                            	    	        afterParserOrEnumRuleCall();
+                            	    	    
+
+                            	    }
+
+
+                            	    }
+
+                            	    this_ENDLINE_8=(Token)match(input,RULE_ENDLINE,FOLLOW_RULE_ENDLINE_in_ruleWBSDeliverable1596); 
+                            	     
+                            	        newLeafNode(this_ENDLINE_8, grammarAccess.getWBSDeliverableAccess().getENDLINETerminalRuleCall_3_0_2_2_1()); 
+                            	        
+
+                            	    }
+                            	    break;
+
+                            	default :
+                            	    break loop25;
+                                }
+                            } while (true);
 
                             this_CLOSEDCURLY_9=(Token)match(input,RULE_CLOSEDCURLY,FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSDeliverable1608); 
                              
@@ -2322,7 +2357,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_15_in_ruleWBSProgram365 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_RULE_OPENCURLY_in_ruleWBSProgram376 = new BitSet(new long[]{0x0000000000000120L});
     public static final BitSet FOLLOW_ruleQualifiedName_in_ruleWBSProgram399 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSProgram410 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSProgram410 = new BitSet(new long[]{0x0000000000000120L});
     public static final BitSet FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSProgram422 = new BitSet(new long[]{0x0000000000000100L});
     public static final BitSet FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSProgram434 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleWBSProject_in_entryRuleWBSProject469 = new BitSet(new long[]{0x0000000000000000L});
@@ -2337,7 +2372,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_15_in_ruleWBSProject640 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_RULE_OPENCURLY_in_ruleWBSProject651 = new BitSet(new long[]{0x0000000000000120L});
     public static final BitSet FOLLOW_ruleQualifiedName_in_ruleWBSProject674 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSProject685 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSProject685 = new BitSet(new long[]{0x0000000000000120L});
     public static final BitSet FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSProject697 = new BitSet(new long[]{0x0000000000000100L});
     public static final BitSet FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSProject709 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleWBSNode_in_entryRuleWBSNode744 = new BitSet(new long[]{0x0000000000000000L});
@@ -2355,7 +2390,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_15_in_ruleWBSActivity1029 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_RULE_OPENCURLY_in_ruleWBSActivity1040 = new BitSet(new long[]{0x0000000000000120L});
     public static final BitSet FOLLOW_ruleQualifiedName_in_ruleWBSActivity1063 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSActivity1074 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSActivity1074 = new BitSet(new long[]{0x0000000000000120L});
     public static final BitSet FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSActivity1086 = new BitSet(new long[]{0x0000000000000100L});
     public static final BitSet FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSActivity1098 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSActivity1115 = new BitSet(new long[]{0x0000000000000002L});
@@ -2369,7 +2404,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_15_in_ruleWBSWorkPackage1290 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_RULE_OPENCURLY_in_ruleWBSWorkPackage1301 = new BitSet(new long[]{0x0000000000000120L});
     public static final BitSet FOLLOW_ruleQualifiedName_in_ruleWBSWorkPackage1324 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSWorkPackage1335 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSWorkPackage1335 = new BitSet(new long[]{0x0000000000000120L});
     public static final BitSet FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSWorkPackage1347 = new BitSet(new long[]{0x0000000000000100L});
     public static final BitSet FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSWorkPackage1359 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSWorkPackage1376 = new BitSet(new long[]{0x0000000000000002L});
@@ -2383,7 +2418,7 @@ public class InternalWBSParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_15_in_ruleWBSDeliverable1551 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_RULE_OPENCURLY_in_ruleWBSDeliverable1562 = new BitSet(new long[]{0x0000000000000120L});
     public static final BitSet FOLLOW_ruleQualifiedName_in_ruleWBSDeliverable1585 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSDeliverable1596 = new BitSet(new long[]{0x0000000000000100L});
+    public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSDeliverable1596 = new BitSet(new long[]{0x0000000000000120L});
     public static final BitSet FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSDeliverable1608 = new BitSet(new long[]{0x0000000000000100L});
     public static final BitSet FOLLOW_RULE_CLOSEDCURLY_in_ruleWBSDeliverable1620 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ENDLINE_in_ruleWBSDeliverable1637 = new BitSet(new long[]{0x0000000000000002L});

@@ -114,7 +114,7 @@ public class PlanSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         description=ML_COMMENT? 
 	 *         name=ID 
 	 *         longName=STRING? 
-	 *         wbsActivity+=[WBSActivity|QualifiedName]* 
+	 *         wbsActivity+=[WBSNode|QualifiedName]* 
 	 *         dependencies+=[ActivityElement|QualifiedName]* 
 	 *         activities+=ActivityElement*
 	 *     )
@@ -131,7 +131,7 @@ public class PlanSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=ID 
 	 *         longName=STRING? 
 	 *         involvedResources+=ResourceInvolvement* 
-	 *         wbsActivity+=[WBSActivity|QualifiedName]* 
+	 *         wbsActivity+=[WBSNode|QualifiedName]* 
 	 *         (start=STRING | (after=[ActivityElement|QualifiedName] offset=INT)) 
 	 *         (end=STRING | duration=INT) 
 	 *         completeness=INT 

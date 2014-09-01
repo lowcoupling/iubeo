@@ -729,7 +729,7 @@ ruleENDLINE
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getActivityGroupAccess().getWbsActivityWBSActivityCrossReference_5_1_0()); 
+	        newCompositeNode(grammarAccess.getActivityGroupAccess().getWbsActivityWBSNodeCrossReference_5_1_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();
@@ -1618,7 +1618,7 @@ this_OPENCURLY_8=RULE_OPENCURLY
 	        }
         }
 		{ 
-	        newCompositeNode(grammarAccess.getActivityAccess().getWbsActivityWBSActivityCrossReference_6_1_0()); 
+	        newCompositeNode(grammarAccess.getActivityAccess().getWbsActivityWBSNodeCrossReference_6_1_0()); 
 	    }
 		ruleQualifiedName		{ 
 	        afterParserOrEnumRuleCall();

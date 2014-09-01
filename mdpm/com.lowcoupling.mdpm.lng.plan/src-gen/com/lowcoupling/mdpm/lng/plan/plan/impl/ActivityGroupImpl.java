@@ -6,7 +6,7 @@ import com.lowcoupling.mdpm.lng.plan.plan.ActivityElement;
 import com.lowcoupling.mdpm.lng.plan.plan.ActivityGroup;
 import com.lowcoupling.mdpm.lng.plan.plan.PlanPackage;
 
-import com.lowcoupling.mdpm.lng.wbs.wBS.WBSActivity;
+import com.lowcoupling.mdpm.lng.wbs.wBS.WBSNode;
 
 import java.util.Collection;
 
@@ -45,7 +45,7 @@ public class ActivityGroupImpl extends ActivityElementImpl implements ActivityGr
    * @generated
    * @ordered
    */
-  protected EList<WBSActivity> wbsActivity;
+  protected EList<WBSNode> wbsActivity;
 
   /**
    * The cached value of the '{@link #getActivities() <em>Activities</em>}' containment reference list.
@@ -83,11 +83,11 @@ public class ActivityGroupImpl extends ActivityElementImpl implements ActivityGr
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<WBSActivity> getWbsActivity()
+  public EList<WBSNode> getWbsActivity()
   {
     if (wbsActivity == null)
     {
-      wbsActivity = new EObjectResolvingEList<WBSActivity>(WBSActivity.class, this, PlanPackage.ACTIVITY_GROUP__WBS_ACTIVITY);
+      wbsActivity = new EObjectResolvingEList<WBSNode>(WBSNode.class, this, PlanPackage.ACTIVITY_GROUP__WBS_ACTIVITY);
     }
     return wbsActivity;
   }
@@ -153,7 +153,7 @@ public class ActivityGroupImpl extends ActivityElementImpl implements ActivityGr
     {
       case PlanPackage.ACTIVITY_GROUP__WBS_ACTIVITY:
         getWbsActivity().clear();
-        getWbsActivity().addAll((Collection<? extends WBSActivity>)newValue);
+        getWbsActivity().addAll((Collection<? extends WBSNode>)newValue);
         return;
       case PlanPackage.ACTIVITY_GROUP__ACTIVITIES:
         getActivities().clear();

@@ -7,7 +7,7 @@ import com.lowcoupling.mdpm.lng.plan.plan.ActivityElement;
 import com.lowcoupling.mdpm.lng.plan.plan.PlanPackage;
 import com.lowcoupling.mdpm.lng.plan.plan.ResourceInvolvement;
 
-import com.lowcoupling.mdpm.lng.wbs.wBS.WBSActivity;
+import com.lowcoupling.mdpm.lng.wbs.wBS.WBSNode;
 
 import java.util.Collection;
 
@@ -65,7 +65,7 @@ public class ActivityImpl extends ActivityElementImpl implements Activity
    * @generated
    * @ordered
    */
-  protected EList<WBSActivity> wbsActivity;
+  protected EList<WBSNode> wbsActivity;
 
   /**
    * The default value of the '{@link #getStart() <em>Start</em>}' attribute.
@@ -217,11 +217,11 @@ public class ActivityImpl extends ActivityElementImpl implements Activity
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<WBSActivity> getWbsActivity()
+  public EList<WBSNode> getWbsActivity()
   {
     if (wbsActivity == null)
     {
-      wbsActivity = new EObjectResolvingEList<WBSActivity>(WBSActivity.class, this, PlanPackage.ACTIVITY__WBS_ACTIVITY);
+      wbsActivity = new EObjectResolvingEList<WBSNode>(WBSNode.class, this, PlanPackage.ACTIVITY__WBS_ACTIVITY);
     }
     return wbsActivity;
   }
@@ -448,7 +448,7 @@ public class ActivityImpl extends ActivityElementImpl implements Activity
         return;
       case PlanPackage.ACTIVITY__WBS_ACTIVITY:
         getWbsActivity().clear();
-        getWbsActivity().addAll((Collection<? extends WBSActivity>)newValue);
+        getWbsActivity().addAll((Collection<? extends WBSNode>)newValue);
         return;
       case PlanPackage.ACTIVITY__START:
         setStart((String)newValue);

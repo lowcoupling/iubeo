@@ -41,7 +41,7 @@ ActivityGroup:
 	(description=ML_COMMENT)?
 	'Group'name=ID OPENCURLY
 	('name' longName= STRING ENDLINE)?
-	('wbsActivity' wbsActivity+=[wbs::WBSActivity|QualifiedName]* ENDLINE)?
+	('wbsActivity' wbsActivity+=[wbs::WBSNode|QualifiedName]* ENDLINE)?
 	('dependsOn' dependencies += ([ActivityElement|QualifiedName])*ENDLINE)?
 	activities += ActivityElement*
 		//groups += ActivityGroup*
@@ -96,7 +96,7 @@ Activity :
 	'Activity' name=ID OPENCURLY	
 	('name' longName= STRING ENDLINE)?
 	('involves' OPENCURLY (involvedResources+=ResourceInvolvement)* CLOSEDCURLY)?
-	('wbsActivity' wbsActivity+=[wbs::WBSActivity|QualifiedName]* ENDLINE)?
+	('wbsActivity' wbsActivity+=[wbs::WBSNode|QualifiedName]* ENDLINE)?
 	(
 	 (('starts' start = STRING ENDLINE)
 	 |('after' after=[ActivityElement|QualifiedName] 'offset' offset = INT ENDLINE)

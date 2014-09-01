@@ -816,7 +816,7 @@ rule__WBSProgram__Group_6__2__Impl
 :
 (
 { before(grammarAccess.getWBSProgramAccess().getGroup_6_2()); }
-(rule__WBSProgram__Group_6_2__0)?
+(rule__WBSProgram__Group_6_2__0)*
 { after(grammarAccess.getWBSProgramAccess().getGroup_6_2()); }
 )
 
@@ -1312,7 +1312,7 @@ rule__WBSProject__Group_6__2__Impl
 :
 (
 { before(grammarAccess.getWBSProjectAccess().getGroup_6_2()); }
-(rule__WBSProject__Group_6_2__0)?
+(rule__WBSProject__Group_6_2__0)*
 { after(grammarAccess.getWBSProjectAccess().getGroup_6_2()); }
 )
 
@@ -1746,7 +1746,7 @@ rule__WBSActivity__Group_3_0_2__2__Impl
 :
 (
 { before(grammarAccess.getWBSActivityAccess().getGroup_3_0_2_2()); }
-(rule__WBSActivity__Group_3_0_2_2__0)?
+(rule__WBSActivity__Group_3_0_2_2__0)*
 { after(grammarAccess.getWBSActivityAccess().getGroup_3_0_2_2()); }
 )
 
@@ -2180,7 +2180,7 @@ rule__WBSWorkPackage__Group_3_0_2__2__Impl
 :
 (
 { before(grammarAccess.getWBSWorkPackageAccess().getGroup_3_0_2_2()); }
-(rule__WBSWorkPackage__Group_3_0_2_2__0)?
+(rule__WBSWorkPackage__Group_3_0_2_2__0)*
 { after(grammarAccess.getWBSWorkPackageAccess().getGroup_3_0_2_2()); }
 )
 
@@ -2614,7 +2614,7 @@ rule__WBSDeliverable__Group_3_0_2__2__Impl
 :
 (
 { before(grammarAccess.getWBSDeliverableAccess().getGroup_3_0_2_2()); }
-(rule__WBSDeliverable__Group_3_0_2_2__0)?
+(rule__WBSDeliverable__Group_3_0_2_2__0)*
 { after(grammarAccess.getWBSDeliverableAccess().getGroup_3_0_2_2()); }
 )
 

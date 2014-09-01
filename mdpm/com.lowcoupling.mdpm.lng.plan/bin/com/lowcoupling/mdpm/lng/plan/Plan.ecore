@@ -39,7 +39,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActivityGroup" eSuperTypes="#//ActivityElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="wbsActivity" unique="false"
-        upperBound="-1" eType="ecore:EClass ../../../../../../../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/WBS.ecore#//WBSActivity"/>
+        upperBound="-1" eType="ecore:EClass ../../../../../../../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/WBS.ecore#//WBSNode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="activities" upperBound="-1"
         eType="#//ActivityElement" containment="true"/>
   </eClassifiers>
@@ -76,7 +76,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="involvedResources" upperBound="-1"
         eType="#//ResourceInvolvement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="wbsActivity" unique="false"
-        upperBound="-1" eType="ecore:EClass ../../../../../../../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/WBS.ecore#//WBSActivity"/>
+        upperBound="-1" eType="ecore:EClass ../../../../../../../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/WBS.ecore#//WBSNode"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="start" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="after" eType="#//ActivityElement"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="offset" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>

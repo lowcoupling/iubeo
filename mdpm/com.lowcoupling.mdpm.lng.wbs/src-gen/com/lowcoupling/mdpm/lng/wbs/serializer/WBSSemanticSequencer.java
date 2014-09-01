@@ -93,7 +93,7 @@ public class WBSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (description=ML_COMMENT? name=ID (wbsNodes+=WBSNode* requirements+=[REQNode|QualifiedName]?)?)
+	 *     (description=ML_COMMENT? name=ID (wbsNodes+=WBSNode* requirements+=[REQNode|QualifiedName]*)?)
 	 */
 	protected void sequence_WBSActivity(EObject context, WBSActivity semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -102,7 +102,7 @@ public class WBSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (description=ML_COMMENT? name=ID (wbsNodes+=WBSNode* requirements+=[REQNode|QualifiedName]?)?)
+	 *     (description=ML_COMMENT? name=ID (wbsNodes+=WBSNode* requirements+=[REQNode|QualifiedName]*)?)
 	 */
 	protected void sequence_WBSDeliverable(EObject context, WBSDeliverable semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -111,7 +111,7 @@ public class WBSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (description=ML_COMMENT? name=ID requirementsModel+=RequirementImport* projects+=WBSProject* requirements+=[REQNode|QualifiedName]?)
+	 *     (description=ML_COMMENT? name=ID requirementsModel+=RequirementImport* projects+=WBSProject* requirements+=[REQNode|QualifiedName]*)
 	 */
 	protected void sequence_WBSProgram(EObject context, WBSProgram semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -120,7 +120,7 @@ public class WBSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (description=ML_COMMENT? name=ID requirementsModel+=RequirementImport* wbsNodes+=WBSNode* requirements+=[REQNode|QualifiedName]?)
+	 *     (description=ML_COMMENT? name=ID requirementsModel+=RequirementImport* wbsNodes+=WBSNode* requirements+=[REQNode|QualifiedName]*)
 	 */
 	protected void sequence_WBSProject(EObject context, WBSProject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -129,7 +129,7 @@ public class WBSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (description=ML_COMMENT? name=ID (wbsNodes+=WBSNode* requirements+=[REQNode|QualifiedName]?)?)
+	 *     (description=ML_COMMENT? name=ID (wbsNodes+=WBSNode* requirements+=[REQNode|QualifiedName]*)?)
 	 */
 	protected void sequence_WBSWorkPackage(EObject context, WBSWorkPackage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

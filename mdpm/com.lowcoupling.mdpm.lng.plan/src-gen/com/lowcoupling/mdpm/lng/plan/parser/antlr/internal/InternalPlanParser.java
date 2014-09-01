@@ -1706,7 +1706,7 @@ public class InternalPlanParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	            
                     	     
-                    	    	        newCompositeNode(grammarAccess.getActivityGroupAccess().getWbsActivityWBSActivityCrossReference_5_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getActivityGroupAccess().getWbsActivityWBSNodeCrossReference_5_1_0()); 
                     	    	    
                     	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleActivityGroup1338);
                     	    ruleQualifiedName();
@@ -4004,7 +4004,7 @@ public class InternalPlanParser extends AbstractInternalAntlrParser {
                     	    	        }
                     	            
                     	     
-                    	    	        newCompositeNode(grammarAccess.getActivityAccess().getWbsActivityWBSActivityCrossReference_6_1_0()); 
+                    	    	        newCompositeNode(grammarAccess.getActivityAccess().getWbsActivityWBSNodeCrossReference_6_1_0()); 
                     	    	    
                     	    pushFollow(FOLLOW_ruleQualifiedName_in_ruleActivity3408);
                     	    ruleQualifiedName();

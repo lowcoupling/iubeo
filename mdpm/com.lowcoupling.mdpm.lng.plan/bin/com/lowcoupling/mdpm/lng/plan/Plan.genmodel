@@ -4,7 +4,7 @@
     editorDirectory="/com.lowcoupling.mdpm.lng.plan.editor/src" modelPluginID="com.lowcoupling.mdpm.lng.plan"
     forceOverwrite="true" modelName="Plan" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="5.0" copyrightFields="false" editPluginID="com.lowcoupling.mdpm.lng.plan.edit"
-    editorPluginID="com.lowcoupling.mdpm.lng.plan.editor" runtimeVersion="2.9" usedGenPackages="../../../../../../../com.lowcoupling.mdpm.lng.resources/src-gen/com/lowcoupling/mdpm/lng/resources/Resources.genmodel#//resources ../../../../../../../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/WBS.genModel#//wBS">
+    editorPluginID="com.lowcoupling.mdpm.lng.plan.editor" runtimeVersion="2.10" usedGenPackages="../../../../../../../com.lowcoupling.mdpm.lng.resources/src-gen/com/lowcoupling/mdpm/lng/resources/Resources.genmodel#//resources ../../../../../../../com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/WBS.genModel#//wBS">
   <genPackages prefix="Plan" basePackage="com.lowcoupling.mdpm.lng.plan" disposableProviderFactory="true"
       ecorePackage="Plan.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Plan.ecore#//Responsibility">

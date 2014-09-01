@@ -6393,12 +6393,12 @@ rule__ActivityGroup__WbsActivityAssignment_5_1
     }
 :
 (
-{ before(grammarAccess.getActivityGroupAccess().getWbsActivityWBSActivityCrossReference_5_1_0()); }
+{ before(grammarAccess.getActivityGroupAccess().getWbsActivityWBSNodeCrossReference_5_1_0()); }
 (
-{ before(grammarAccess.getActivityGroupAccess().getWbsActivityWBSActivityQualifiedNameParserRuleCall_5_1_0_1()); }
-	ruleQualifiedName{ after(grammarAccess.getActivityGroupAccess().getWbsActivityWBSActivityQualifiedNameParserRuleCall_5_1_0_1()); }
+{ before(grammarAccess.getActivityGroupAccess().getWbsActivityWBSNodeQualifiedNameParserRuleCall_5_1_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getActivityGroupAccess().getWbsActivityWBSNodeQualifiedNameParserRuleCall_5_1_0_1()); }
 )
-{ after(grammarAccess.getActivityGroupAccess().getWbsActivityWBSActivityCrossReference_5_1_0()); }
+{ after(grammarAccess.getActivityGroupAccess().getWbsActivityWBSNodeCrossReference_5_1_0()); }
 )
 
 ;
@@ -6747,12 +6747,12 @@ rule__Activity__WbsActivityAssignment_6_1
     }
 :
 (
-{ before(grammarAccess.getActivityAccess().getWbsActivityWBSActivityCrossReference_6_1_0()); }
+{ before(grammarAccess.getActivityAccess().getWbsActivityWBSNodeCrossReference_6_1_0()); }
 (
-{ before(grammarAccess.getActivityAccess().getWbsActivityWBSActivityQualifiedNameParserRuleCall_6_1_0_1()); }
-	ruleQualifiedName{ after(grammarAccess.getActivityAccess().getWbsActivityWBSActivityQualifiedNameParserRuleCall_6_1_0_1()); }
+{ before(grammarAccess.getActivityAccess().getWbsActivityWBSNodeQualifiedNameParserRuleCall_6_1_0_1()); }
+	ruleQualifiedName{ after(grammarAccess.getActivityAccess().getWbsActivityWBSNodeQualifiedNameParserRuleCall_6_1_0_1()); }
 )
-{ after(grammarAccess.getActivityAccess().getWbsActivityWBSActivityCrossReference_6_1_0()); }
+{ after(grammarAccess.getActivityAccess().getWbsActivityWBSNodeCrossReference_6_1_0()); }
 )
 
 ;
