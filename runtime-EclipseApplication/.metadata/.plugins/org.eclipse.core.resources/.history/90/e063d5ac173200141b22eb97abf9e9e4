@@ -1,0 +1,4 @@
+package requirementSet{
+	/*An example of requirement*/
+	req  r_1 "The System shall boot in less than 10 seconds";
+}

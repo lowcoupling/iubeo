@@ -1,0 +1,10 @@
+
+Program programName {
+	Project projectName{
+		Activity activityName{
+			WorkPackage wpName1;
+			WorkPackage wpName2 {
+			}		
+		}	
+	}
+}

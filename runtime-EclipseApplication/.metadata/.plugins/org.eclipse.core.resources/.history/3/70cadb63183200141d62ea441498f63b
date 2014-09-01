@@ -1,0 +1,14 @@
+
+Program programName {
+	req_import "../1_initiating/app_requirements.rml";
+	Project projectName{
+		Activity activityName{
+			WorkPackage wpName1;
+			WorkPackage wpName2 {
+				requirements {
+					
+				}
+			}		
+		}	
+	}
+}

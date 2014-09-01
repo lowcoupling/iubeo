@@ -1,0 +1,26 @@
+//Start defining the group of resources
+Group SoftwareEngineering{
+	id	sweng;
+	cost	100;
+	type	'PERSON';
+}
+
+Group SoftwareDeveloper{
+	id	swdev;
+	cost	100;
+	type	'PERSON';
+}
+
+Group WorkStation{
+	id	pc;
+	cost	2000;
+	type	'PC';
+}
+
+//then define single resources
+Resource	Tom{
+	type	SoftwareEngineering;
+}
+Resource	Mike{
+	type	SoftwareDeveloper;
+}
