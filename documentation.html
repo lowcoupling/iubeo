@@ -256,9 +256,30 @@ In iubeo an activity is characterized by :
 <li>
 a duration (see activityName2) keyword followed by a number representing the number of days from the start date after which the activity shall be finished or by an end keyword followed by the date representing the end of the activity;
 </li>
-zero or more <i>dependsOn</i> statements followed by a reference to already defined ActivityElements representing the activities, groups or checkpoints on which the activity depends. An Activity may depend on other activities belonging to the same or different projects/programs. This is why you need to specify the whole name space (i.e. program.project.activity, etc.) after the dependsOn keyword to identify the depending activities.
+<li>
+zero or more <i>dependsOn</i> statements followed by a reference to already defined ActivityElements representing the activities, groups or checkpoints on which the activity depends. 
+An Activity may depend on other activities belonging to the same or different projects/programs. This is why you need to specify the whole name space (i.e. program.project.activity, etc.) after the dependsOn keyword to identify the depending activities.
+<li>
 have a  <i>completeness</i> keyword followed by  an integer ranging 0 to 100 representing the percentage of the activity completion
-     
+</li>
+<pre style="max-width:300px;">
+Project project1 {
+    Activity activity1 {
+		starts '31/08/2013' ;
+		ends '20/9/2013';
+		completeness 20 % ;
+	}
+	/*
+	 * activity2 description
+	 */
+	Activity activity2 {
+		after project1.activity1 offset 1;
+		duration 30;
+		completeness 0%;
+		dependsOn project1.activity1;
+	}
+}
+</pre>     
 	<img class="img-thumbnail center" src="images/ibshot10.png">
      <img class="img-thumbnail center" src="images/ibshot11.png">
      <img class="img-thumbnail center" src="images/ibshot12.png">
