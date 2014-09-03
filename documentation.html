@@ -234,6 +234,30 @@ Resource	Mike{
      </pre>
      <img class="img-thumbnail center" src="images/ibshot9.png">
      <a name="plans"><h3>Modeling Plans</h3> </a>
+In iubeo the a domain specific language called <i>Plan</i> provides keywords modeling of project plans and schedules.
+A project, represente by the keyword <i>project</i> is the main container of elements related to a schedule 
+which can be activities, groups of activities and checkpoints, all generically represented by the ActivityElement super class.
+A project is characterized by a description and a name. The description of a project is the multiline comment before of its definition
+<pre>
+/*
+ * The Project description
+ */
+Project projectName {
+    // project's elements...
+}
+</pre>
+
+
+A project activity is represented by the <i>activity keyword</i>.
+In iubeo an activity is characterized by :
+<ul>
+<li>a start keyword (see activityName1 in the following examples), followed by a date, or by an after keyword followed by the reference to the Activity, Group of Activity or Checkpoint after which it shall start. In this second case the offset keyword shall be used to express how many days after the end of the referenced element the activity shall start;
+</li>
+<li>
+a duration (see activityName2) keyword followed by a number representing the number of days from the start date after which the activity shall be finished or by an end keyword followed by the date representing the end of the activity;
+</li>
+zero or more <i>dependsOn</i> statements followed by a reference to already defined ActivityElements representing the activities, groups or checkpoints on which the activity depends. An Activity may depend on other activities belonging to the same or different projects/programs. This is why you need to specify the whole name space (i.e. program.project.activity, etc.) after the dependsOn keyword to identify the depending activities.
+have a  <i>completeness</i> keyword followed by  an integer ranging 0 to 100 representing the percentage of the activity completion
      
 	<img class="img-thumbnail center" src="images/ibshot10.png">
      <img class="img-thumbnail center" src="images/ibshot11.png">
