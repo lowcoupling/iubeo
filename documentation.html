@@ -280,6 +280,38 @@ Project project1 {
 	}
 }
 </pre>     
+
+An activity group represents a set of logically related activities identified by a name. An activity group starts when the earliest activity it contains is started and ends when the last activity it contains if finished.
+<pre style="max-width:600px;margin-top:20px;">
+Project project1 {
+    /*
+     *represents a group of activities
+     */
+    Group group1{
+	Activity activity1 {
+		starts '31/08/2013' ;
+		ends '20/9/2013';
+		completeness 20 % ;
+	}
+	/*
+	 * activity2 description
+	 */
+	Activity activity2 {
+		after project1.group1.activity1 offset 1;
+		duration 30;
+		completeness 0%;
+		dependsOn project1.group1.activity1;
+	}
+	}
+	Activity activityname {
+		after project1.group1 offset 3;
+		duration 20;
+		completeness 0%;
+		dependsOn project1.group1.activity2;
+	}
+}
+</pre>
+
 	<img class="img-thumbnail center" src="images/ibshot10.png">
      <img class="img-thumbnail center" src="images/ibshot11.png">
      <img class="img-thumbnail center" src="images/ibshot12.png">
