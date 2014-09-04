@@ -313,6 +313,15 @@ Project project1 {
 }
 </pre>
 
+We have implemented a dedicated plugin which uses the Nebula GanttChart Widget to depict the schedule defined by means of the Plan language.
+
+In order to show it click on the Window menu->ShowView and select Other… then in the window that will pop up select the Gantt view.
+The currently selected activity, in the outline or in the Plan editor, is highlighted in the Gantt view.
+
+Also when you click on an activity in the Gantt view a pop up shows the information related to the clicked activity.
+
+As you can see in  this example although we have specified a duration of 25 days the activityName2 is said to be 33 days long. This is because only the working days are counted and by default Saturday and Monday are not considered working days. You can configure your own set of working days and holidays through the Eclipse preferences.
+
 	<img class="img-thumbnail center" src="images/ibshot10.png">
      <img class="img-thumbnail center" src="images/ibshot11.png">
      <img class="img-thumbnail center" src="images/ibshot12.png">
