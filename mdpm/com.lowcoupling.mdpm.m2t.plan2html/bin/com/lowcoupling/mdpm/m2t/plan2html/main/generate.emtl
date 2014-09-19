@@ -703,7 +703,7 @@
                       <loopVariable name="wbsAct">
                         <eType xsi:type="ecore:EClass" href="http://www.lowcoupling.com/mdpm/lng/wbs/WBS#//WBSActivity"/>
                       </loopVariable>
-                      <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/4/Sequence(WBSActivity)">
+                      <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/4/Sequence(WBSNode)">
                         <source xsi:type="ocl.ecore:VariableExp" name="act" referredVariable="/0/generateDoc/%.2/%.1/%.9/%.3/%.5/%/act">
                           <eType xsi:type="ecore:EClass" href="http://www.lowcoupling.com/mdpm/lng/plan/Plan#//Activity"/>
                         </source>
@@ -716,7 +716,7 @@
                     <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/p>"/>
                     <ifExpr xsi:type="ocl.ecore:OperationCallExp">
                       <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
-                      <source xsi:type="ocl.ecore:PropertyCallExp" eType="/4/Sequence(WBSActivity)">
+                      <source xsi:type="ocl.ecore:PropertyCallExp" eType="/4/Sequence(WBSNode)">
                         <source xsi:type="ocl.ecore:VariableExp" name="act" referredVariable="/0/generateDoc/%.2/%.1/%.9/%.3/%.5/%/act">
                           <eType xsi:type="ecore:EClass" href="http://www.lowcoupling.com/mdpm/lng/plan/Plan#//Activity"/>
                         </source>
@@ -767,7 +767,7 @@
                       <loopVariable name="wbsAct">
                         <eType xsi:type="ecore:EClass" href="http://www.lowcoupling.com/mdpm/lng/wbs/WBS#//WBSActivity"/>
                       </loopVariable>
-                      <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/4/Sequence(WBSActivity)">
+                      <iterSet xsi:type="ocl.ecore:PropertyCallExp" eType="/4/Sequence(WBSNode)">
                         <source xsi:type="ocl.ecore:VariableExp" name="act" referredVariable="/0/generateDoc/%.2/%.1/%.9/%.3/%.6/%/act">
                           <eType xsi:type="ecore:EClass" href="http://www.lowcoupling.com/mdpm/lng/plan/Plan#//ActivityGroup"/>
                         </source>
@@ -780,7 +780,7 @@
                     <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&lt;/p>"/>
                     <ifExpr xsi:type="ocl.ecore:OperationCallExp">
                       <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
-                      <source xsi:type="ocl.ecore:PropertyCallExp" eType="/4/Sequence(WBSActivity)">
+                      <source xsi:type="ocl.ecore:PropertyCallExp" eType="/4/Sequence(WBSNode)">
                         <source xsi:type="ocl.ecore:VariableExp" name="act" referredVariable="/0/generateDoc/%.2/%.1/%.9/%.3/%.6/%/act">
                           <eType xsi:type="ecore:EClass" href="http://www.lowcoupling.com/mdpm/lng/plan/Plan#//ActivityGroup"/>
                         </source>
@@ -1932,8 +1932,8 @@
     <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(WBSDeliverable)" instanceClassName="java.util.List">
       <elementType xsi:type="ecore:EClass" href="platform:/resource/com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/WBS.ecore#//WBSDeliverable"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(WBSActivity)" instanceClassName="java.util.List">
-      <elementType xsi:type="ecore:EClass" href="platform:/resource/com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/WBS.ecore#//WBSActivity"/>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(WBSNode)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="platform:/resource/com.lowcoupling.mdpm.lng.wbs/src-gen/com/lowcoupling/mdpm/lng/wbs/WBS.ecore#//WBSNode"/>
     </eClassifiers>
     <eClassifiers xsi:type="ocl.ecore:SetType" name="Set(ActivityElement)" instanceClassName="java.util.Set">
       <elementType xsi:type="ecore:EClass" href="http://www.lowcoupling.com/mdpm/lng/plan/Plan#//ActivityElement"/>

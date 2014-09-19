@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="com.lowcoupling.mdpm.m2t.plan2html">
     <property name="ECLIPSE_HOME" value="../../../../../../Applications/eclipse_kepler_modeling"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../iubeo/mdpm"/>
+    <property name="ECLIPSE_WORKSPACE" value="../.."/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="com.lowcoupling.mdpm.m2t.plan2html.libraryclasspath">
